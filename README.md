@@ -1,3 +1,3 @@
 # Connect2016inKoriyama
 
-(´;ω;｀)
+(´;ω;｀)　by髙橋
