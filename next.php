@@ -8,7 +8,6 @@
 	$smarty->compile_dir  = 'templates_c/';
 
 
-
 	$file = new SplFileObject('./csv/opendata.csv');
 	foreach ($file as $line) {
 	    $line = mb_convert_encoding($line, 'UTF-8', 'sjis-win');
@@ -16,11 +15,12 @@
 	}
 
 
-	ChromePhp::log($data);
+	$index = $_GET["index"];
 
+	ChromePhp::log($data[$index][4]);
 
-	$smarty->assign('data', $data);
+	$smarty->assign('data', $data[$index]);
 
-	$smarty->display('index.html');
+	$smarty->display('next.html');
 
 ?>
