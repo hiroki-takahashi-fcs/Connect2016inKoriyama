@@ -11,3 +11,5 @@ tortoisegitてすと
 test by関根
 
 てすとおおおおおおおおおお　by 前森
+
+やっはろー！ by高橋直
