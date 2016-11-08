@@ -14,9 +14,15 @@ function mapInit() {
     var googlemap = new google.maps.Map(document.getElementById("mapField"), option);
 
     //マーカー設置
-    var marker = new google.maps.Marker({
-        position: centerPosition,
-        map: googlemap,
-        title: 'TEST'
-    });
+    var $script = $('#script');
+    var dataArray = JSON.parse($script.attr('data-array'));
+    for (var i=0; i<dataArray.length; i++){
+        var marker = new google.maps.Marker({
+//            position: centerPosition,
+            position:  new google.maps.LatLng(dataArray[i][6], dataArray[i][7]),
+            map: googlemap,
+            title: dataArray[i][4]
+        });
+    }
+
 }
