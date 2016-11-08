@@ -1,0 +1,135 @@
+
+/*### HTML Def Setting ###*/
+
+h1,h2,h3,h4,ol,ul,li,dl,dt,dd,p,div,address,body,form,address{padding:0;margin:0;}
+
+ol,ul,li{list-style:none}
+
+img{-ms-interpolation-mode: bicubic;border:0;}
+address{font-style:normal}
+
+html {
+	overflow-y:scroll;
+}
+
+body{
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	font-size:12px;
+	text-align:center;
+	line-height:1.5em;
+	}
+
+
+/*### Base Link ###*/
+a:link{color:#000;text-decoration:none}
+a:visited {color:#000;text-decoration:none}
+a:hover {color:#f00;text-decoration:none}
+
+/*### Base Color ###*/
+.red{color:#ff0000;}
+.red2{color:#cc0000;}
+.beige{color:#664D44}
+.green{color:#7ab747}
+.blue{color:#369}
+.blue2{color:#3366cc}
+.gray{color:#666}
+.gray2{color:#333}
+.tya{color:#7a4714}
+.white{color:#fff}
+.pink{color:#ff6666}
+.ore{color:#ff6600}
+
+.gray_bg{background:#f0f0f0}
+.gray_bg2{background:#eee}
+.gray_bg3{background:#ddd}
+.blue_bg{background:#EDF7FE}
+.blue_bg2{background:#c0e6e6}
+.red_bg{background:#FFD9DA}
+.ore_bg{background:#ffcc99}
+.ore_bg2{background:#ffeddd}
+.pink_bg{background:#fcc}
+.green_bg{background:#cce6b3}
+
+
+/*### Base Position ###*/
+
+.cl{clear:both;}
+.posi{position:relative;}
+.posii{position:absolute;}
+.float-L{float:left;}
+.float-R{float:right;}
+.valign{vertical-align:middle}
+.none{display:none}
+.lh15{line-height:1.5em;}
+.lh13{line-height:1.3em;}
+
+.mg5{margin:5px;}
+.mg5left{margin-left:5px;}
+.mg5right{margin-right:5px;}
+.mg5top{margin-top:5px;}
+.mg5bottom{margin-bottom:5px;}
+.mg10{margin:10px;}
+.mg10left{margin-left:10px;}
+.mg10right{margin-right:10px;}
+.mg10top{margin-top:10px;}
+.mg10bottom{margin-bottom:10px;}
+.mg15{margin:15px;}
+.mg15left{margin-left:15px;}
+.mg15right{margin-right:15px;}
+.mg15bottom{margin-bottom:15px;}
+.mg15top{margin-top:15px;}
+.mg20{margin:20px;}
+.mg20left{margin-left:20px;}
+.mg20right{margin-right:20px;}
+.mg20bottom{margin-bottom:20px;}
+.mg20top{margin-top:20px;}
+.mg25{margin:25px;}
+.mg25left{margin-left:25px;}
+.mg25right{margin-right:25px;}
+.mg25bottom{margin-bottom:25px;}
+.mg25top{margin-top:25px;}
+
+.pd5{padding:5px;}
+.pd5top{padding-top:5px;}
+.pd5bottom{padding-bottom:5px;}
+.pd5left{padding-left:5px;}
+.pd5right{padding-right:5px;}
+.pd10{padding:10px;}
+.pd10top{padding-top:10px;}
+.pd10bottom{padding-bottom:10px;}
+.pd10left{padding-left:10px;}
+.pd10right{padding-right:10px;}
+.pd15{padding:15px;}
+.pd15top{padding-top:15px;}
+.pd15bottom{padding-bottom:15px;}
+.pd15left{padding-left:15px;}
+.pd15right{padding-right:15px;}
+.pd20{padding:20px;}
+.pd20top{padding-top:20px;}
+.pd20bottom{padding-bottom:20px;}
+.pd20left{padding-left:20px;}
+.pd20right{padding-right:20px;}
+.pd25{padding:25px;}
+.pd25left{padding-left:25px;}
+.pd25right{padding-right:25px;}
+.pd25top{padding-top:25px;}
+.pd25bottom{padding-bottom:25px;}
+
+div:after{  
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	line-height:0;
+	font-size: 0.1em;
+	clear: both;
+}
+
+/*### Base Size ###*/
+.fsize8{font-size:10px}
+.fsize10{font-size:12px}
+.fsize12{font-size:14px}
+.fsize14{font-size:16px}
+.fsize16{font-size:18px}
+.bold{font-weight:bold}
+.unbold{font-weight:normal}

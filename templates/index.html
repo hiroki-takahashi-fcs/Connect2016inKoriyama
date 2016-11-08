@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8">
-		<title>hello</title>
-		<script type="text/javascript" src="./scripts/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDS5ci0gvRtGTuR54rtdo7fJ0HtP6lYWJM"></script>
-		<script type="text/javascript" src="./scripts/index.js"></script>
-	</head>
-	<body>
-		{for $i=0 to $data|@count - 1}
-			<div>
-				<a href="next.php?index={$i}">{$data[$i][4]}</a>
+<head>
+	<meta charset="UTF-8">
+	<title>hello</title>
+	<script type="text/javascript" src="./scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDS5ci0gvRtGTuR54rtdo7fJ0HtP6lYWJM"></script>
+	<script type="text/javascript" src="./scripts/index.js"></script>
+	<link rel="stylesheet" href="css\base.css" type="text/css" media="screen">
+</head>
+<body>
+	<br><br>
+	<div id="Content">
+		<div id="In-Map">
+			<div id="Map-List">
+				<ul>
+					{for $i=0 to $data|@count - 1}
+						<li>
+							<a href="next.php?index={$i}">{$data[$i][4]}</a>
+						</li>
+					{/for}
+				</ul>
 			</div>
-		{/for}
-		<div id="mapField" style="width:500px; height:500px;"></div>
-	</body>
+			<div id="Map-Body">
+				<div id="mapField" style="width:700px; height:600px;"></div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
