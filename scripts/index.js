@@ -2,9 +2,10 @@ $(window).ready(function () {
 	mapInit();
 });
 
-    var googlemap;
-    var marker = [];
-    var infoWindow = [];
+var googlemap;
+var marker = [];
+var infoWindow = [];
+var currentInfoWindow = null;
 
 function mapInit() {
     var centerPosition = new google.maps.LatLng(37.415408, 140.144065);
@@ -28,7 +29,8 @@ function mapInit() {
 
         // 情報ウィンドウ
         infoWindow[i] = new google.maps.InfoWindow({
-            content: "<h3>" + dataArray[i][4] + "</h3><br>" + dataArray[i][8] + "<br><br><a href='next.php?index=" + i + "'>詳細画面へ>>>",
+            content: "<h3>" + dataArray[i][4] + "</h3><br>" + dataArray[i][8]  
+                        + "<br><br><a href='next.php?index=" + i + "'>詳細画面へ>>>",
         });
 
         markerEvent(i);
@@ -38,7 +40,11 @@ function mapInit() {
 
 function markerEvent(i){
     marker[i].addListener('click', function(){
+        if (currentInfoWindow){
+            currentInfoWindow.close();
+        }
         infoWindow[i].open(googlemap, marker[i]);
+        currentInfoWindow = infoWindow[i];
     });
 }
 
