@@ -1526,3 +1526,10 @@ div.Pager a:hover{
 		color:#999 !important;
 		text-decoration:none !important;
 	}
+
+	.gm-style-iw {
+		overflow: hidden ! important;
+	}
+	.gm-style-iw div {
+		overflow: hidden ! important;
+	}
