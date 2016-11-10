@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-10 06:13:10
+/* Smarty version 3.1.30, created on 2016-11-10 06:18:02
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582401e668f410_09959767',
+  'unifunc' => 'content_5824030ad70dc7_15527075',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478754788,
+      1 => 1478754883,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582401e668f410_09959767 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5824030ad70dc7_15527075 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -46,7 +46,7 @@ function content_582401e668f410_09959767 (Smarty_Internal_Template $_smarty_tpl)
 			<div id="img">ここに画像</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
-			<table>
+			<table id="eventdetail">
 				<tr><td>開催地</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[11];?>
 </td><td>郵便番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[10];?>
 </td></tr>
@@ -55,10 +55,9 @@ function content_582401e668f410_09959767 (Smarty_Internal_Template $_smarty_tpl)
 </td></tr>
 				<tr><td>開催期間</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[14];?>
 </td></tr>
-				<tr></tr>
 			</table>
 		</div>
-		<!--<ul>
+		<!--<ul> csvの中身を順に出力している
 			<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value, 'd');
 if ($_from !== null) {
