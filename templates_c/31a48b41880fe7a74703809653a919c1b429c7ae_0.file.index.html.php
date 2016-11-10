@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-10 18:44:09
+/* Smarty version 3.1.30, created on 2016-11-10 20:47:32
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5824416952a005_90192048',
+  'unifunc' => 'content_58245e54826de6_65933836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478771046,
+      1 => 1478778450,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5824416952a005_90192048 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58245e54826de6_65933836 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -67,6 +67,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 				<div id="mapField" style="width:750px; height:600px;"></div>
 			</div>
 		</div>
+		<div id="route" style="width: 750px; height: 200px;overflow: scroll""></div>
 	</div>
 </body>
 <footer>
