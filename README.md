@@ -1,8 +1,7 @@
 # Connect2016inKoriyama
 
 
-👀👂\n
-💋  by髙橋
+👀 by髙橋
 
 TEST by渡邉 aaaa
 
