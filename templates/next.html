@@ -2,14 +2,30 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<title>hello</title>
+		<title>イベント詳細画面</title>
 		<script type="text/javascript" src="./scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDS5ci0gvRtGTuR54rtdo7fJ0HtP6lYWJM"></script>
+		<script type="text/javascript" src="./scripts/index.js"></script>
+		<link rel="stylesheet" href="css\detail.css" type="text/css" media="screen">
 	</head>
 	<body>
-		<ul>
+		<div id="Content">
+			<div id="title">{$data[4]}<div ida="kana">{$data[5]}</div></div>
+			<div id="img">ここに画像</div>
+			<div id="eventdata">{$data[8]}</div>
+			<table id="eventdetail">
+				<tr><td>開催地</td><td>{$data[11]}</td><td>郵便番号</td><td>{$data[10]}</td></tr>
+				<tr><td>開催日</td><td>{$data[13]}</td><td>電話番号</td><td>{$data[9]}</td></tr>
+				<tr><td>開催期間</td><td>{$data[14]}</td></tr>
+			</table>
+		</div>
+		<!--<ul> csvの中身を順に出力している
 			{foreach from=$data item=d}
 				<li>{$d}</li>
 			{/foreach}
-		</ul>
+		</ul>-->
+		<div id="Map-Body">
+			<div id="mapField" style="width:700px; height:300px;"></div>
+		</div>
 	</body>
 </html>
