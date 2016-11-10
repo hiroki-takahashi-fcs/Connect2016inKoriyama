@@ -1,6 +1,6 @@
 <?php
 
-	require_once './smarty-3.1.30//libs/Smarty.class.php';
+	require_once './smarty-3.1.30/libs/Smarty.class.php';
 	require_once './scripts/ChromePhp.php';
 
 	$smarty = new Smarty();
@@ -17,7 +17,7 @@
 
 	$index = $_GET["index"];
 
-	ChromePhp::log($data[$index][4]);
+	//ChromePhp::log($data[$index][4]);
 
 	$smarty->assign('data', $data[$index]);
 

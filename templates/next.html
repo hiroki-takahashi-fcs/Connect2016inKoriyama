@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>イベント詳細画面</title>
 		<script type="text/javascript" src="./scripts/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDS5ci0gvRtGTuR54rtdo7fJ0HtP6lYWJM"></script>
-		<script type="text/javascript" src="./scripts/index.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDS5ci0gvRtGTuR54rtdo7fJ0HtP6lYWJM"></script>
+		<script type="text/javascript" src="./scripts/next.js"></script>
 		<link rel="stylesheet" href="css\detail.css" type="text/css" media="screen">
 	</head>
 	<body>
@@ -18,6 +18,7 @@
 				<tr><td>開催日</td><td>{$data[13]}</td><td>電話番号</td><td>{$data[9]}</td></tr>
 				<tr><td>開催期間</td><td>{$data[14]}</td></tr>
 			</table>
+			<div id="location" hidden="hidden" data-lat="{$data[6]}" data-lon="{$data[7]}"></div>
 		</div>
 		<!--<ul> csvの中身を順に出力している
 			{foreach from=$data item=d}
@@ -25,7 +26,15 @@
 			{/foreach}
 		</ul>-->
 		<div id="Map-Body">
-			<div id="mapField" style="width:700px; height:300px;"></div>
+			<div id="mapField" style="width:730px; height:600px;"></div>
+		</div>
+		<div>
+			<div>周辺情報</div>
+			<div>
+				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
+				<button class="placeSearch-btn" type="button" data-types="cafe">カフェ</button>
+				<button class="placeSearch-btn" type="button" data-types="bus_station">バス停</button>
+			</div>
 		</div>
 	</body>
 </html>
