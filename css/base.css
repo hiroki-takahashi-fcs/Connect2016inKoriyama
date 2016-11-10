@@ -1584,3 +1584,11 @@ div.Pager a:hover{
 		width:120px;
 		height: 50px
 	}
+
+	#infoWindow {
+		margin: 5px;
+/*		height: 200px;*/ 
+	}
+	#infoWindow span {
+		color: blue;
+	}

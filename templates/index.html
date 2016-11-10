@@ -16,7 +16,8 @@
 				<ul>
 					{for $i=0 to $data|@count - 1}
 						<li>
-							<a href="next.php?index={$i}">{$data[$i][4]}</a>
+<!--							<a href="next.php?index={$i}">{$data[$i][4]}</a> -->
+							<a href="#map" onclick="fopenMarker({$i});">{$data[$i][4]}</a>
 						</li>
 					{/for}
 				</ul>

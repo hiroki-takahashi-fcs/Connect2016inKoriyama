@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-10 09:08:24
+/* Smarty version 3.1.30, created on 2016-11-10 18:44:09
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58242af84423f1_39218327',
+  'unifunc' => 'content_5824416952a005_90192048',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478765289,
+      1 => 1478771046,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58242af84423f1_39218327 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5824416952a005_90192048 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,8 +50,11 @@ if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
 						<li>
-							<a href="next.php?index=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+<!--							<a href="next.php?index=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
+</a> -->
+							<a href="#map" onclick="fopenMarker(<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+);"><?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
 </a>
 						</li>
 					<?php }
