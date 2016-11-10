@@ -6,6 +6,7 @@ var googlemap;
 var marker = [];
 var infoWindow = [];
 var currentInfoWindow = null;
+var side_list = new Object();
 
 function mapInit() {
     var centerPosition = new google.maps.LatLng(37.415408, 140.144065);
@@ -29,11 +30,14 @@ function mapInit() {
 
         // 情報ウィンドウ
         infoWindow[i] = new google.maps.InfoWindow({
-            content: "<div style=”margin: 5px; height: 200px”><h3>" + dataArray[i][4] + "</h3><br><a href='next.php?index=" + i + "'>詳細画面へ>>></div>",
+            content: "<div id='infoWindow'><h3>" + dataArray[i][4] + "</h3>"
+                     + "<br><a href='next.php?index=" + i + "'>詳細画面へ>>></div>",
             maxWidth: 400
         });
 
         markerEvent(i);
+
+        side_list[i] = marker[i];
     }
 
 }
@@ -48,3 +52,6 @@ function markerEvent(i){
     });
 }
 
+function fopenMarker(markerid){
+    google.maps.event.trigger(side_list[markerid], 'click');
+}
