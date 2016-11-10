@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-08 17:25:07
+/* Smarty version 3.1.30, created on 2016-11-10 09:08:24
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58218be32ab1b9_14059820',
+  'unifunc' => 'content_58242af84423f1_39218327',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478593505,
+      1 => 1478765289,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58218be32ab1b9_14059820 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58242af84423f1_39218327 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -61,10 +61,20 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 				</ul>
 			</div>
 			<div id="Map-Body">
-				<div id="mapField" style="width:700px; height:600px;"></div>
+				<div id="mapField" style="width:750px; height:600px;"></div>
 			</div>
 		</div>
 	</div>
 </body>
+<footer>
+	<div id="bottom">
+		<table id="character"><tr><td>ここにマスコット</td><td id="Descrip">ここに説明</td></tr></table>
+
+		<div id="buttons">
+			<button tyep="button" id="button1" class="button">ボタン</button>
+			<button type="button" id="button2" class="button">ボタン</button>
+		</div>
+	</div>
+</footer>
 </html><?php }
 }
