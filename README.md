@@ -1,14 +1,3 @@
 # Connect2016inKoriyama
 
-
-👀 by髙橋
-
-TEST by渡邉 aaaa
-
-test by関根
-
-てすとおおおおおおおおおお　by 前森
-
-やっはろー！ by高橋直
-
-こんちわby有賀
+2016/11/10 22:55 髙橋　詳細画面に周辺検索を追加、indexとnextでjs分けた
