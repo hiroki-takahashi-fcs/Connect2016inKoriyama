@@ -1566,7 +1566,8 @@ div.Pager a:hover{
 		width: 300px;
 		margin: 10px;
 		padding: 8px;
-		font-size: 16px
+		font-size: 16px;
+		overflow: auto;
 	}
 
 	#buttons{
