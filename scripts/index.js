@@ -17,8 +17,62 @@ function mapInit() {
         center : centerPosition,
         mapTypeId : google.maps.MapTypeId.ROADMAP
     };
+
+    // マップスタイル
+    /*
+    var styles = [
+        {
+            stylers: [
+            { hue: "#00ffe6" },
+            { saturation: -20 }
+            ]
+        },{
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [
+            { lightness: 100 },
+            { visibility: "simplified" }
+            ]
+        },{
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+            { visibility: "off" }
+            ]
+        }
+    ];
+    */
+
+    var styles = [
+        {"elementType":"labels","stylers":[{"visibility":"off"},{"color":"#f49f53"}]},
+        {"featureType":"landscape","stylers":[{"color":"#f9ddc5"},{"lightness":-7}]},
+        {"featureType":"road","stylers":[{"color":"#813033"},{"lightness":43}]},
+        {"featureType":"poi.business","stylers":[{"color":"#645c20"},{"lightness":38}]},
+        {"featureType":"water","stylers":[{"color":"#1994bf"},{"saturation":-69},{"gamma":0.99},{"lightness":43}]},
+        {"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#f19f53"},{"weight":1.3},{"visibility":"on"},{"lightness":16}]},
+        {"featureType":"poi.business"},
+        {"featureType":"poi.park","stylers":[{"color":"#645c20"},{"lightness":39}]},
+        {"featureType":"poi.school","stylers":[{"color":"#a95521"},{"lightness":35}]},{},
+        {"featureType":"poi.medical","elementType":"geometry.fill","stylers":[{"color":"#813033"},{"lightness":38},{"visibility":"off"}]},{},{},{},{},{},{},{},{},{},{},{},{"elementType":"labels"},
+        {"featureType":"poi.sports_complex","stylers":[{"color":"#9e5916"},{"lightness":32}]},{},
+        {"featureType":"poi.government","stylers":[{"color":"#9e5916"},{"lightness":46}]},
+        {"featureType":"transit.station","stylers":[{"visibility":"off"}]},
+        {"featureType":"transit.line","stylers":[{"color":"#813033"},{"lightness":22}]},
+        {"featureType":"transit","stylers":[{"lightness":38}]},
+        {"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#f19f53"},{"lightness":-10}]},{},{},{}
+    ];
+
+    // Create a new StyledMapType object, passing it the array of styles,
+    // as well as the name to be displayed on the map type control.
+    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+   
+
     //地図本体描画
     googlemap = new google.maps.Map(document.getElementById("mapField"), option);
+
+    googlemap.mapTypes.set('map_style', styledMap);
+    googlemap.setMapTypeId('map_style');
+
 
     directionDisplay = new google.maps.DirectionsRenderer();
     directionDisplay.setMap(googlemap);
@@ -77,8 +131,10 @@ function getRoute(latlng){
     */
     // 郡山駅から目的地経由の華の湯
     var request = {
-        origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
-        destination: new google.maps.LatLng(37.491190, 140.258520), // 到着地の緯度・経度
+//        origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
+//        destination: new google.maps.LatLng(37.491190, 140.258520), // 到着地の緯度・経度
+        origin: "郡山駅",      // 出発地点の経度・緯度
+        destination: "ホテル華の湯", // 到着地の緯度・経度
         waypoints: [{                                               // 中継地点
             location: latlng,
             stopover: true
