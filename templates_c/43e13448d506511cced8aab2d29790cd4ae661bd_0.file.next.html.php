@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-11 08:36:26
+/* Smarty version 3.1.30, created on 2016-11-11 09:12:08
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582574fa5e1a08_76546347',
+  'unifunc' => 'content_58257d587e2287_98851500',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478849784,
+      1 => 1478851927,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582574fa5e1a08_76546347 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58257d587e2287_98851500 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,13 +51,13 @@ function content_582574fa5e1a08_76546347 (Smarty_Internal_Template $_smarty_tpl)
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
 			<table id="evedetail">
-				<tr><td>開催地</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[11];?>
-</td><td>郵便番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[10];?>
+				<tr><td id="head">開催地</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[11];?>
+</td><td id="head">郵便番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[10];?>
 </td></tr>
-				<tr><td>開催日</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[13];?>
-</td><td>電話番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[9];?>
+				<tr><td id="head">開催日</td><td> date("Y/m/d",strtotime(<?php echo $_smarty_tpl->tpl_vars['data']->value[13];?>
+));</td><td id="head">電話番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[9];?>
 </td></tr>
-				<tr><td>開催期間</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[14];?>
+				<tr><td id="head">開催期間</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[14];?>
 </td></tr>
 			</table>
 			<div id="location" hidden="hidden" data-lat="<?php echo $_smarty_tpl->tpl_vars['data']->value[6];?>

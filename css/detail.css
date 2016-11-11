@@ -18,6 +18,13 @@
 	color: red;
 }
 
+tr td#head{
+	color: #fff;
+	border-color: black;
+	background-color: #A0522D;
+	height: 28px;
+}
+
 #kana{
 	float: left;
 	font-size: 12px;
