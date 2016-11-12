@@ -208,11 +208,11 @@ function markerEvent(i, dataArray){
                             dataArray_h[j][2], dataArray_h[j][3], 0);
             if (j == 0) {
                 distance_min = distance;
-                Radiation = dataArray_h[j][5] + dataArray_h[j][6] + "(" + dataArray_h[j][2] + ", " + dataArray_h[j][3] + ")";
+                Radiation = dataArray_h[j][5] + dataArray_h[j][6];
             } else {
                 if (distance < distance_min){
                     distance_min = distance;
-                    Radiation = dataArray_h[j][5] + dataArray_h[j][6] + "(" + dataArray_h[j][2] + ", " + dataArray_h[j][3] + ")";
+                    Radiation = dataArray_h[j][5] + dataArray_h[j][6];
                 }
             }
         }
