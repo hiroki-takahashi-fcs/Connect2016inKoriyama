@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 06:01:34
+/* Smarty version 3.1.30, created on 2016-11-12 14:03:49
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5826a22f012269_81721955',
+  'unifunc' => 'content_582713351c7365_70088009',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478926892,
+      1 => 1478955827,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5826a22f012269_81721955 (Smarty_Internal_Template $_smarty_tpl) {
+function content_582713351c7365_70088009 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -43,10 +43,10 @@ function content_5826a22f012269_81721955 (Smarty_Internal_Template $_smarty_tpl)
 		<div id="Content">
 			<div id="title"><?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
 </div>
-			<div id="buttons">
+			<!--<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
-			</div>
+			</div>-->
 			<div id="img">ここに画像</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
