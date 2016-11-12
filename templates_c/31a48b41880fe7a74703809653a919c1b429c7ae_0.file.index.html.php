@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 11:49:35
+/* Smarty version 3.1.30, created on 2016-11-12 14:18:48
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5826f3bf012ce8_93512551',
+  'unifunc' => 'content_582716b87d8203_11804512',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478939947,
+      1 => 1478956369,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5826f3bf012ce8_93512551 (Smarty_Internal_Template $_smarty_tpl) {
+function content_582716b87d8203_11804512 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -64,11 +64,24 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 				</ul>
 			</div>
 			<div id="Map-Body">
-				<div id="mapField" style="width:750px; height:600px;"></div>
+				<div>
+					<span>
+						<table id="iconbox">
+							<tr><th>
+								<td><input type="image" id="routeicon" src="img/icon/icon1.png" title="徒歩で移動"></td>
+								<td><input type="image" id="routeicon" src="img/icon/icon2.png" title="車で移動"></td>
+							</th></tr>
+						</table>
+						<span id="search"><i id="searchArea">検索エリア</i><button tyep="button" id="Searchbtn" class="button">検索</button></span>
+					</span>
+				</div>
+				<div id="mapField" style="width:750px; height:590px;"></div>
 			</div>
 		</div>
 		<div id="route" style="width: 750px; height: 200px; overflow: scroll"></div>
-			<div id="bottom">
+		<table id="character"><tr><td id="gaiyou">イベント概要</td></tr><tr><td id="Descrip">アイコンを選択するとイベントの概要が表示されます。</td></tr></table>
+		<button type="button" id="regist-btn">イベント登録</button>
+		<!--<div id="bottom">
 		<table id="character"><tr><td>ここにマスコット</td><td id="Descrip">ここに説明</td></tr></table>
 
 		<div id="buttons">
@@ -76,7 +89,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 			<button type="button" id="button2" class="button">ボタン</button>
 		</div>
 	</div>
-	</div>
+	</div>-->
 </body>
 
 </html><?php }

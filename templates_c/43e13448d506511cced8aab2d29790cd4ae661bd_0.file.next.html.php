@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 14:22:26
+/* Smarty version 3.1.30, created on 2016-11-12 14:10:22
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58271792e45c75_00552824',
+  'unifunc' => 'content_582714be734486_70309330',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478956930,
+      1 => 1478956172,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58271792e45c75_00552824 (Smarty_Internal_Template $_smarty_tpl) {
+function content_582714be734486_70309330 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,20 +41,13 @@ function content_58271792e45c75_00552824 (Smarty_Internal_Template $_smarty_tpl)
 	<body>
 		<br><br>
 		<div id="Content">
-			<div><a href="index.php">ホーム</a> &gt; <?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
-</div>
 			<div id="title"><?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
 </div>
 			<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
 			</div>
-			<div id="img">
-				<blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
-				<?php echo '<script'; ?>
- async src="https://theta360.com/widgets.js" charset="utf-8"><?php echo '</script'; ?>
->
-			</div>
+			<div id="img">ここに画像</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
 			<table id="evedetail">
@@ -71,12 +64,21 @@ function content_58271792e45c75_00552824 (Smarty_Internal_Template $_smarty_tpl)
 " data-lon="<?php echo $_smarty_tpl->tpl_vars['data']->value[7];?>
 "></div>
 			<div id="Map-Body">
-				<div id="mapField" style="height:400px;"></div>
+				<div id="mapField" style="height:410px;"></div>
 			</div>
 			<div id="areadata">周辺情報
-				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
+				<button class="placeSearch-btn" type="button" data-types="atm">ATM</button>
+				<button class="placeSearch-btn" type="button" data-types="bar">居酒屋</button>
 				<button class="placeSearch-btn" type="button" data-types="cafe">カフェ</button>
-				<button class="placeSearch-btn" type="button" data-types="bus_station">バス停</button>
+				<button class="placeSearch-btn" type="button" data-types="car_rental">レンタカー</button>
+				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
+				<button class="placeSearch-btn" type="button" data-types="gas_station">ガソリンスタンド</button>
+				<button class="placeSearch-btn" type="button" data-types="hospital">病院</button>
+				<button class="placeSearch-btn" type="button" data-types="parking">駐車場</button>
+				<button class="placeSearch-btn" type="button" data-types="restaurant">レストラン</button>
+				<button class="placeSearch-btn" type="button" data-types="spa">温泉</button>
+				<button class="placeSearch-btn" type="button" data-types="taxi_stand">タクシー乗り場</button>
+				<button class="placeSearch-btn" type="button" data-types="train_station">駅</button>
 			</div>
 		</div>
 	</body>

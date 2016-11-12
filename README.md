@@ -14,7 +14,9 @@ https://snazzymaps.com/
 
 Connect2016inKoriyama/
 
- ├ img/　…　画像ファイルを格納します。 ※まだないけど
+ ├ img/　…　画像ファイルを格納します。
+ 
+    └ event　…　イベント種別ごとのマーカーアイコンにする画像ファイルを格納します。
 
  ├ css/　…　CSSファイルを格納します。
  
