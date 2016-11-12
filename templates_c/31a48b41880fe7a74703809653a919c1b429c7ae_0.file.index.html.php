@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.30, created on 2016-11-12 14:17:04
+=======
+/* Smarty version 3.1.30, created on 2016-11-12 14:18:48
+>>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
+<<<<<<< HEAD
   'unifunc' => 'content_58271650885b84_43600945',
+=======
+  'unifunc' => 'content_582716b87d8203_11804512',
+>>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
+<<<<<<< HEAD
       1 => 1478956620,
+=======
+      1 => 1478956369,
+>>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_58271650885b84_43600945 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_582716b87d8203_11804512 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -80,6 +96,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 		</div>
 		<div id="route" style="width: 750px; height: 200px; overflow: scroll"></div>
 		<table id="character"><tr><td id="gaiyou">イベント概要</td></tr><tr><td id="Descrip">アイコンを選択するとイベントの概要が表示されます。</td></tr></table>
+		<button type="button" id="regist-btn">イベント登録</button>
 		<!--<div id="bottom">
 		<table id="character"><tr><td>ここにマスコット</td><td id="Descrip">ここに説明</td></tr></table>
 
