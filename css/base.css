@@ -284,17 +284,25 @@ body{
 }
 
 #route{
-	margin-top:5px;
 	background: #fff;
 	font-size: 14px;
 	float: left;
 }
 
-#iconSet tr th{
-	width: 80px;
+#icondetail{
+	border: 1px solid #A0522D;
+	margin: 5px 0px;
 }
 
-#iconSet tr th td img{
+#iconSet{
+	width: 80px;
+
+}
+
+#icons{
+	font-size: 12px;
+}
+#icons img{
 	width: 24px;
 }
 
@@ -1614,7 +1622,7 @@ div.Pager a:hover{
 	#character{
 		float:left;
 		text-align: left;
-		margin: 5px 10px 10px;
+		margin: 0px 10px 10px;
 	}
 
 	#gaiyou{
