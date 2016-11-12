@@ -4,6 +4,10 @@
 
 2016/11/10 22:55 髙橋　詳細画面に周辺検索を追加、indexとnextでjs分けた
 
+http://connect2016.azurewebsites.net
+
+Google Map デザインサンプル
+https://snazzymaps.com/
 
 
 各ファイルとフォルダについて
