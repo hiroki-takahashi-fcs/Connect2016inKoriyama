@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 15:23:14
+/* Smarty version 3.1.30, created on 2016-11-13 00:17:42
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582725d29e4c97_87200992',
+  'unifunc' => 'content_5827a316054043_96404028',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478960593,
+      1 => 1478992638,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582725d29e4c97_87200992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5827a316054043_96404028 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -76,19 +76,27 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 					</span>
 				</div>
 				<div id="mapField" style="width:750px; height:590px;"></div>
-				<table id="iconSet">
+				<table id="icondetail">
+					<tbody>
 					<tr>
-						<th><span>アイコン区分</span>
-							<td><img src="img/event/marker0.png">test</td>
-							<td><img src="img/event/marker1.png">test</td>
-							<td><img src="img/event/marker2.png">test</td>
-						</th>
+						<th id="iconSet">アイコン区分
+							<td id="icons"><img src="img/event/marker0.png">test</td>
+							<td id="icons"><img src="img/event/marker1.png">test</td>
+							<td id="icons"><img src="img/event/marker2.png">test</td>
+							<td id="icons"><img src="img/event/marker3.png">test</td>
+							<td id="icons"><img src="img/event/marker4.png">test</td>
+						<!--</th>
 					</tr>
 					<tr>
-						<th>
-							<td><img src="img/event/marker5.png">test</td>
+						<th class="iconSet">-->
+							<td id="icons"><img src="img/event/marker5.png">test</td>
+							<td id="icons"><img src="img/event/marker6.png">test</td>
+							<td id="icons"><img src="img/event/marker7.png">test</td>
+							<td id="icons"><img src="img/event/marker8.png">test</td>
+							<td id="icons"><img src="img/event/marker9.png">test</td>
 						</th>
 					</tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
