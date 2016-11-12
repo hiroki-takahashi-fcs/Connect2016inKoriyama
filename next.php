@@ -8,7 +8,7 @@
 	$smarty->compile_dir  = 'templates_c/';
 
 
-	$file = new SplFileObject('./csv/opendata.csv');
+	$file = new SplFileObject('./csv/opendata_bofore.csv');
 	foreach ($file as $line) {
 	    $line = mb_convert_encoding($line, 'UTF-8', 'sjis-win');
 	    $data[] = str_getcsv($line);

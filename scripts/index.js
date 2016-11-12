@@ -1,6 +1,10 @@
 $(window).ready(function () {
 	createMark();
 	mapInit();
+
+    $('#regist-btn').on('click', function() {
+        window.location.href = 'register.php';
+    });
 });
 
 var googlemap;
