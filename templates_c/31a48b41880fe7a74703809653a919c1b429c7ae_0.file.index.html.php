@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.30, created on 2016-11-12 14:17:04
-=======
-/* Smarty version 3.1.30, created on 2016-11-12 14:18:48
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+/* Smarty version 3.1.30, created on 2016-11-12 15:23:14
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-<<<<<<< HEAD
-  'unifunc' => 'content_58271650885b84_43600945',
-=======
-  'unifunc' => 'content_582716b87d8203_11804512',
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+  'unifunc' => 'content_582725d29e4c97_87200992',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-<<<<<<< HEAD
-      1 => 1478956620,
-=======
-      1 => 1478956369,
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+      1 => 1478960593,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_58271650885b84_43600945 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_582716b87d8203_11804512 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+function content_582725d29e4c97_87200992 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -92,6 +76,20 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 					</span>
 				</div>
 				<div id="mapField" style="width:750px; height:590px;"></div>
+				<table id="iconSet">
+					<tr>
+						<th><span>アイコン区分</span>
+							<td><img src="img/event/marker0.png">test</td>
+							<td><img src="img/event/marker1.png">test</td>
+							<td><img src="img/event/marker2.png">test</td>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<td><img src="img/event/marker5.png">test</td>
+						</th>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<div id="route" style="width: 750px; height: 200px; overflow: scroll"></div>

@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.30, created on 2016-11-12 14:03:49
-=======
-/* Smarty version 3.1.30, created on 2016-11-12 14:10:22
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+/* Smarty version 3.1.30, created on 2016-11-12 14:31:41
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-<<<<<<< HEAD
-  'unifunc' => 'content_582713351c7365_70088009',
-=======
-  'unifunc' => 'content_582714be734486_70309330',
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+  'unifunc' => 'content_582719bd033a53_43204992',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-<<<<<<< HEAD
-      1 => 1478955827,
-=======
-      1 => 1478956172,
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+      1 => 1478956931,
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_582713351c7365_70088009 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_582714be734486_70309330 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 524b35b3ce2989fa2d65caf27515493a579f68d6
+function content_582719bd033a53_43204992 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
