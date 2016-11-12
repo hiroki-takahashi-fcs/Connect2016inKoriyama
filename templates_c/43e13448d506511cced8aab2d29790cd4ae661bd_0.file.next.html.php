@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-11 09:12:08
+/* Smarty version 3.1.30, created on 2016-11-12 14:22:26
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58257d587e2287_98851500',
+  'unifunc' => 'content_58271792e45c75_00552824',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478851927,
+      1 => 1478956930,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58257d587e2287_98851500 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58271792e45c75_00552824 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,21 +41,28 @@ function content_58257d587e2287_98851500 (Smarty_Internal_Template $_smarty_tpl)
 	<body>
 		<br><br>
 		<div id="Content">
+			<div><a href="index.php">ホーム</a> &gt; <?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
+</div>
 			<div id="title"><?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
 </div>
 			<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
 			</div>
-			<div id="img">ここに画像</div>
+			<div id="img">
+				<blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
+				<?php echo '<script'; ?>
+ async src="https://theta360.com/widgets.js" charset="utf-8"><?php echo '</script'; ?>
+>
+			</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
 			<table id="evedetail">
 				<tr><td id="head">開催地</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[11];?>
 </td><td id="head">郵便番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[10];?>
 </td></tr>
-				<tr><td id="head">開催日</td><td> date("Y/m/d",strtotime(<?php echo $_smarty_tpl->tpl_vars['data']->value[13];?>
-));</td><td id="head">電話番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[9];?>
+				<tr><td id="head">開催日</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[13];?>
+</td><td id="head">電話番号</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[9];?>
 </td></tr>
 				<tr><td id="head">開催期間</td><td><?php echo $_smarty_tpl->tpl_vars['data']->value[14];?>
 </td></tr>

@@ -11,12 +11,16 @@
 	<body>
 		<br><br>
 		<div id="Content">
+			<div><a href="index.php">ホーム</a> &gt; {$data[4]}</div>
 			<div id="title">{$data[4]}</div>
 			<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
 			</div>
-			<div id="img">ここに画像</div>
+			<div id="img">
+				<blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
+				<script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
+			</div>
 			<div id="eventdata">{$data[8]}</div>
 			<table id="evedetail">
 				<tr><td id="head">開催地</td><td>{$data[11]}</td><td id="head">郵便番号</td><td>{$data[10]}</td></tr>

@@ -91,6 +91,13 @@ tr td#head{
 	height:29px;
 }
 
+a:link { 
+	color: blue;
+	text-decoration:underline;
+}	
+
+a:visited { color: green;}
+
 #Header-Select table{border-collapse:collapse;}
 #Header-Select .line{border-left:1px dotted #666;}
 
