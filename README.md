@@ -6,6 +6,9 @@
 
 http://connect2016.azurewebsites.net
 
+Google Map デザインサンプル
+https://snazzymaps.com/
+
 
 各ファイルとフォルダについて
 
