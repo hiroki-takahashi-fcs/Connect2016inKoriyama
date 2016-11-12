@@ -1,4 +1,5 @@
 $(window).ready(function () {
+	createMark();
 	mapInit();
 });
 
@@ -10,6 +11,63 @@ var targetMarker;
 var infoWindow = [];
 var currentInfoWindow = null;
 var side_list = new Object();
+
+// マーク判別データ保存用のグローバル変数
+var eventMark = [];
+
+// イベントマークアイコンのMax数
+var eventImgNum = 10;
+
+// Excelデータから、表示するマークを判別する
+function createMark(){
+
+	eventMark.length = 0;
+	
+	// データを読み込む
+	var $script = $('#script');
+    var dataArray = JSON.parse($script.attr('data-array'));
+    
+	// Excelのイベント種別データと、その出現回数の取得
+	var eventName = [];
+	var eventNum = [];
+	for (var i=0; i<dataArray.length; i++){
+
+		if(dataArray[i][3] == "個人イベント" || dataArray[i][3] == ""){
+			continue;
+		}
+
+		var index = eventName.indexOf(dataArray[i][3]);
+
+		if(index != -1){
+			eventNum[index]++;
+		}
+		else {
+			eventName.push(dataArray[i][3]);
+			eventNum.push(1);
+		}
+	}
+	
+	// マーク画像数分に種別をソート（最後の一つは、その他用）
+	//var folderPath = "img/event/";
+	//eventImgNum = (new ActiveXObject("Shell.Application")).NameSpace(folderPath).Items().count;
+
+	for (var i=1; i<eventImgNum; i++){
+
+		eventMark.push("");
+		var num = 0;
+		for (var j=0; j<eventName.length; j++){
+
+			if(eventMark.indexOf(eventName[j]) == -1){
+
+				if(num < eventNum[j]){
+					eventMark[i - 1] = eventName[j];
+					num = eventNum[j];
+				}
+			}
+		}
+	}
+}
+
 
 function mapInit() {
     var centerPosition = new google.maps.LatLng(37.415408, 140.144065);
@@ -93,12 +151,25 @@ function mapInit() {
     var $script = $('#script');
     var dataArray = JSON.parse($script.attr('data-array'));
     for (var i=0; i<dataArray.length; i++){
+    
+    	//マーカーのアイコン設定
+    	var markNum = eventMark.indexOf(dataArray[i][3]);
+    	if(markNum == -1){
+    		if(dataArray[i][3] == "個人イベント"){
+    			markNum = -1;
+    		}
+    		else {
+    			markNum = eventImgNum - 1;
+    		}
+    	}
+    	
         //マーカー設置
         marker[i] = new google.maps.Marker({
             position:  new google.maps.LatLng(dataArray[i][6], dataArray[i][7]),
             map: googlemap,
             animation: google.maps.Animation.DROP,
-            title: dataArray[i][4]
+            title: dataArray[i][4],
+            icon: "img/event/marker" + (markNum + 1) + ".png"
         });
 
         // 情報ウィンドウ
