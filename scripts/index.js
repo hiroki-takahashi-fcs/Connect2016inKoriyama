@@ -141,7 +141,7 @@ function markerEvent(i, dataArray){
         }
 
         // キャラに喋らす
-        document.getElementById('character').rows[0].cells[1].innerHTML = dataArray[i][8];
+        document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8];
     });
 }
 
