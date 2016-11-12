@@ -82,37 +82,6 @@ function mapInit() {
     };
 
     // マップスタイル
-/*
-    var styles = [  // Lost In The Desert
-        {"elementType":"labels","stylers":[{"visibility":"off"},{"color":"#f49f53"}]},
-        {"featureType":"landscape","stylers":[{"color":"#f9ddc5"},{"lightness":-7}]},
-        {"featureType":"road","stylers":[{"color":"#813033"},{"lightness":43}]},
-        {"featureType":"poi.business","stylers":[{"color":"#645c20"},{"lightness":38}]},
-        {"featureType":"water","stylers":[{"color":"#1994bf"},{"saturation":-69},{"gamma":0.99},{"lightness":43}]},
-        {"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#f19f53"},{"weight":1.3},{"visibility":"on"},{"lightness":16}]},
-        {"featureType":"poi.business"},
-        {"featureType":"poi.park","stylers":[{"color":"#645c20"},{"lightness":39}]},
-        {"featureType":"poi.school","stylers":[{"color":"#a95521"},{"lightness":35}]},{},
-        {"featureType":"poi.medical","elementType":"geometry.fill","stylers":[{"color":"#813033"},{"lightness":38},{"visibility":"off"}]},{},{},{},{},{},{},{},{},{},{},{},{"elementType":"labels"},
-        {"featureType":"poi.sports_complex","stylers":[{"color":"#9e5916"},{"lightness":32}]},{},
-        {"featureType":"poi.government","stylers":[{"color":"#9e5916"},{"lightness":46}]},
-        {"featureType":"transit.station","stylers":[{"visibility":"off"}]},
-        {"featureType":"transit.line","stylers":[{"color":"#813033"},{"lightness":22}]},
-        {"featureType":"transit","stylers":[{"lightness":38}]},
-        {"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#f19f53"},{"lightness":-10}]},{},{},{}
-    ];
-*/
-/*
-    var styles = [    // Old Dry Mud
-        {"featureType":"landscape","stylers":[{"hue":"#FFAD00"},{"saturation":50.2},{"lightness":-34.8},{"gamma":1}]},
-        {"featureType":"road.highway","stylers":[{"hue":"#FFAD00"},{"saturation":-19.8},{"lightness":-1.8},{"gamma":1}]},
-        {"featureType":"road.arterial","stylers":[{"hue":"#FFAD00"},{"saturation":72.4},{"lightness":-32.6},{"gamma":1}]},
-        {"featureType":"road.local","stylers":[{"hue":"#FFAD00"},{"saturation":74.4},{"lightness":-18},{"gamma":1}]},
-        {"featureType":"water","stylers":[{"hue":"#00FFA6"},{"saturation":-63.2},{"lightness":38},{"gamma":1}]},
-        {"featureType":"poi","stylers":[{"hue":"#FFC300"},{"saturation":54.2},{"lightness":-14.4},{"gamma":1}]}
-    ];
-*/
-
     var styles = [    // Avocado World
         {"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},
         {"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},
@@ -135,25 +104,23 @@ function mapInit() {
         {"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}
     ];
 
-
-
-    // Create a new StyledMapType object, passing it the array of styles,
-    // as well as the name to be displayed on the map type control.
     var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
    
     //地図本体描画
     googlemap = new google.maps.Map(document.getElementById("mapField"), option);
 
+    //マップにスタイルをセット
     googlemap.mapTypes.set('map_style', styledMap);
     googlemap.setMapTypeId('map_style');
 
-
+    // ルート検索用
     directionDisplay = new google.maps.DirectionsRenderer();
     directionDisplay.setMap(googlemap);
     directionDisplay.setPanel(document.getElementById("route"));
 
     var $script = $('#script');
     var dataArray = JSON.parse($script.attr('data-array'));
+
     for (var i=0; i<dataArray.length; i++){
     
     	//マーカーのアイコン設定
@@ -230,8 +197,30 @@ function markerEvent(i, dataArray){
             marker[i].setAnimation(google.maps.Animation.BOUNCE);
         }
 
-        // キャラに喋らす
-        document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8];
+        // 放射線量CSVより最も近いデータを取得
+        var $script = $('#script2');
+        var dataArray_h = JSON.parse($script.attr('data_h-array'));
+        
+        var Radiation;
+        var distance_min;
+        for (var j=0; j<dataArray_h.length; j++){
+            var distance = getDistance(dataArray[i][6], dataArray[i][7],
+                            dataArray_h[j][2], dataArray_h[j][3], 0);
+            if (j == 0) {
+                distance_min = distance;
+                Radiation = dataArray_h[j][5] + dataArray_h[j][6];
+            } else {
+                if (distance < distance_min){
+                    distance_min = distance;
+                    Radiation = dataArray_h[j][5] + dataArray_h[j][6];
+                }
+            }
+        }
+
+        // 説明文表示
+        document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8] + "<br>" + Radiation;
+
+        
     });
 }
 
@@ -252,8 +241,6 @@ function getRoute(latlng){
 
     // 郡山駅から目的地経由の華の湯
     var request = {
-//        origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
-//        destination: new google.maps.LatLng(37.491190, 140.258520), // 到着地の緯度・経度
         origin: "郡山駅",                  // 出発地点の経度・緯度
         destination: "ホテル華の湯",       // 到着地の緯度・経度
         waypoints: [{                     // 中継地点
@@ -295,3 +282,42 @@ function clickEventFunc() {
 
     });
 }
+
+/**
+ * 2点間の緯度経度から距離を取得
+ * 測地線航海算法を使用して距離を算出する。
+ * @see http://hamasyou.com/blog/2010/09/07/post-2/
+ * @param float 緯度1
+ * @param float 経度2
+ * @param float 緯度2
+ * @param float 経度2
+ * @param 小数点以下の桁数(べき乗で算出精度を指定)
+ */
+function getDistance(lat1, lng1, lat2, lng2, precision){
+  var distance = 0;
+  if( ( Math.abs(lat1 - lat2) < 0.00001 ) && ( Math.abs(lng1 - lng2) < 0.00001 ) ) {
+    distance = 0;
+  }else{
+    lat1 = lat1 * Math.PI / 180;
+    lng1 = lng1 * Math.PI / 180;
+    lat2 = lat2 * Math.PI / 180;
+    lng2 = lng2 * Math.PI / 180;
+
+    var A = 6378140;
+    var B = 6356755;
+    var F = ( A - B ) / A;
+
+    var P1 = Math.atan( ( B / A ) * Math.tan(lat1) );
+    var P2 = Math.atan( ( B / A ) * Math.tan(lat2) );
+
+    var X = Math.acos( Math.sin(P1) * Math.sin(P2) + Math.cos(P1) * Math.cos(P2) * Math.cos(lng1 - lng2) );
+    var L = ( F / 8 ) * ( ( Math.sin(X) - X ) * Math.pow( (Math.sin(P1) + Math.sin(P2) ), 2) / Math.pow( Math.cos(X / 2), 2 ) - ( Math.sin(X) - X ) * Math.pow( Math.sin(P1) - Math.sin(P2), 2 ) / Math.pow( Math.sin(X), 2) );
+
+    distance = A * ( X + L );
+    var decimal_no = Math.pow(10, precision);
+    distance = Math.round(decimal_no * distance / 1) / decimal_no;
+  }
+  return distance;
+}
+
+
