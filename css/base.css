@@ -270,11 +270,11 @@ body{
 }*/
 
 #Content{
-	width:1100px;
+	width:1080px;
 	padding:0px 20px;
 	margin-left:auto;
 	margin-right: auto;
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom:10px;
 	text-align:left;
 	background-color: #DEB887;
@@ -284,7 +284,7 @@ body{
 }
 
 #route{
-	margin-top:30px;
+	margin-top:50px;
 	background: #fff;
 	font-size: 14px;
 	float: left;
@@ -1030,22 +1030,34 @@ div.Pager a:hover{
 
 #iconbox{
 	float:left;
-	margin:5px 0;
+	margin:0 0 5px;
+	border: 2px solid #A0522D;
+	height: 30px;
 }
 
-#test{
+#search{
 	float: right;
+	height: 30px;
 }
 
 #searchArea{
 	border:2px solid #A0522D;
 	width: 200px;
 	display: inline-block;
-	margin: 5px 5px;
+	margin: 0px 5px;
+	height: 30px;
+	vertical-align: top;
 }
 
 #Searchbtn{
 	width: 60px;
+	padding-top:5px;
+}
+
+#routeicon{
+	height: 25px;
+	width:  25px;
+	border: 2px solid #A0522D;
 }
 
 /*map*/
@@ -1055,13 +1067,14 @@ div.Pager a:hover{
 
 #Map-List{
 	float:right;
-	width:180px;
+	width:200px;
 	font-size:12px;
 	padding:10px;
 	border:2px solid #A0522D;
 	margin:10px;
 	height:580px;
-	overflow:auto;
+	overflow-y:auto;
+	overflow-x:hidden;
 	border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
 }
 
@@ -1607,11 +1620,12 @@ div.Pager a:hover{
 		border: double red;
 		display: inline-block;
 		height: 100px;
-		width: 300px;
+		width: 280px;
 		height: 170px;
 		/*padding: 8px;*/
 		font-size: 16px;
 		overflow: auto;
+		margin-left: 10px;
 	}
 
 	#buttons{

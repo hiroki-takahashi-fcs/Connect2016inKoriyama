@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 11:07:04
+/* Smarty version 3.1.30, created on 2016-11-12 12:15:32
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5826e9c8b13787_93193490',
+  'unifunc' => 'content_5826f9d4b97a40_36514923',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478945215,
+      1 => 1478949306,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5826e9c8b13787_93193490 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5826f9d4b97a40_36514923 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -66,8 +66,13 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 			<div id="Map-Body">
 				<div>
 					<span>
-						<table id="iconbox"><tr><th><td>項目</td><td>項目</td></th></tr></table>
-						<span id="test"><i id="searchArea">検索エリア</i><button tyep="button" id="Searchbtn" class="button">検索</button></span>
+						<table id="iconbox">
+							<tr><th>
+								<td><input type="image" id="routeicon" src="img/icon/icon1.png" title="徒歩で移動"></td>
+								<td><input type="image" id="routeicon" src="img/icon/icon2.png" title="車で移動"></td>
+							</th></tr>
+						</table>
+						<span id="search"><i id="searchArea">検索エリア</i><button tyep="button" id="Searchbtn" class="button">検索</button></span>
 					</span>
 				</div>
 				<div id="mapField" style="width:750px; height:590px;"></div>
