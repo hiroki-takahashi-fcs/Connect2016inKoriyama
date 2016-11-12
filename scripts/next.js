@@ -71,7 +71,8 @@ function mapInit() {
     // マーカー設置
     var marker = new google.maps.Marker({
         position: currentPosition,
-        map: map
+        map: map,
+        icon: "img/event/marker0.png"
     });
 
     infowindow = new google.maps.InfoWindow();
