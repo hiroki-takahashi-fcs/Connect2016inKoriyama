@@ -19,31 +19,8 @@ function mapInit() {
     };
 
     // マップスタイル
-    /*
-    var styles = [
-        {
-            stylers: [
-            { hue: "#00ffe6" },
-            { saturation: -20 }
-            ]
-        },{
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [
-            { lightness: 100 },
-            { visibility: "simplified" }
-            ]
-        },{
-            featureType: "road",
-            elementType: "labels",
-            stylers: [
-            { visibility: "off" }
-            ]
-        }
-    ];
-    */
-
-    var styles = [
+/*
+    var styles = [  // Lost In The Desert
         {"elementType":"labels","stylers":[{"visibility":"off"},{"color":"#f49f53"}]},
         {"featureType":"landscape","stylers":[{"color":"#f9ddc5"},{"lightness":-7}]},
         {"featureType":"road","stylers":[{"color":"#813033"},{"lightness":43}]},
@@ -61,6 +38,41 @@ function mapInit() {
         {"featureType":"transit","stylers":[{"lightness":38}]},
         {"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#f19f53"},{"lightness":-10}]},{},{},{}
     ];
+*/
+/*
+    var styles = [    // Old Dry Mud
+        {"featureType":"landscape","stylers":[{"hue":"#FFAD00"},{"saturation":50.2},{"lightness":-34.8},{"gamma":1}]},
+        {"featureType":"road.highway","stylers":[{"hue":"#FFAD00"},{"saturation":-19.8},{"lightness":-1.8},{"gamma":1}]},
+        {"featureType":"road.arterial","stylers":[{"hue":"#FFAD00"},{"saturation":72.4},{"lightness":-32.6},{"gamma":1}]},
+        {"featureType":"road.local","stylers":[{"hue":"#FFAD00"},{"saturation":74.4},{"lightness":-18},{"gamma":1}]},
+        {"featureType":"water","stylers":[{"hue":"#00FFA6"},{"saturation":-63.2},{"lightness":38},{"gamma":1}]},
+        {"featureType":"poi","stylers":[{"hue":"#FFC300"},{"saturation":54.2},{"lightness":-14.4},{"gamma":1}]}
+    ];
+*/
+
+    var styles = [    // Avocado World
+        {"featureType":"water","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#aee2e0"}]},
+        {"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#abce83"}]},
+        {"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#769E72"}]},
+        {"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#7B8758"}]},
+        {"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"color":"#EBF4A4"}]},
+        {"featureType":"poi.park","elementType":"geometry","stylers":[{"visibility":"simplified"},{"color":"#8dab68"}]},
+        {"featureType":"road","elementType":"geometry.fill","stylers":[{"visibility":"simplified"}]},
+        {"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#5B5B3F"}]},
+        {"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ABCE83"}]},
+        {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+        {"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#A4C67D"}]},
+        {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#9BBF72"}]},
+        {"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#EBF4A4"}]},
+        {"featureType":"transit","stylers":[{"visibility":"off"}]},
+        {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#87ae79"}]},
+        {"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#7f2200"},{"visibility":"off"}]},
+        {"featureType":"administrative","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"visibility":"on"},{"weight":4.1}]},
+        {"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#495421"}]},
+        {"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]}
+    ];
+
+
 
     // Create a new StyledMapType object, passing it the array of styles,
     // as well as the name to be displayed on the map type control.
@@ -85,6 +97,7 @@ function mapInit() {
         marker[i] = new google.maps.Marker({
             position:  new google.maps.LatLng(dataArray[i][6], dataArray[i][7]),
             map: googlemap,
+            animation: google.maps.Animation.DROP,
             title: dataArray[i][4]
         });
 
@@ -95,7 +108,7 @@ function mapInit() {
             maxWidth: 400
         });
 
-        markerEvent(i, dataArray[i]);
+        markerEvent(i, dataArray);
 
         side_list[i] = marker[i];
     }
@@ -114,8 +127,21 @@ function markerEvent(i, dataArray){
         currentInfoWindow = infoWindow[i];
 
         // ルート検索を行う
-        getRoute(new google.maps.LatLng(dataArray[6], dataArray[7]));
+        getRoute(new google.maps.LatLng(dataArray[i][6], dataArray[i][7]));
 
+        // マーカーにアニメーションを設定
+        if (marker[i].getAnimation()){
+        } else {
+            // ほかのマーカーのアニメーションをとめる
+            for (var idx=0; idx<dataArray.length; idx++) {
+                marker[idx].setAnimation(null);
+            }
+            // はねさす
+            marker[i].setAnimation(google.maps.Animation.BOUNCE);
+        }
+
+        // キャラに喋らす
+        document.getElementById('character').rows[0].cells[1].innerHTML = dataArray[i][8];
     });
 }
 
@@ -126,20 +152,29 @@ function getRoute(latlng){
     var request = {
         origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
         destination: latlng,                                        // 到着地の緯度・経度
-        travelMode: google.maps.DirectionsTravelMode.DRIVING        // ルートの種類
+        // 交通手段
+//        travelMode: google.maps.DirectionsTravelMode.DRIVING        // 自動車
+//        travelMode: google.maps.DirectionsTravelMode.BICYCLING      // 自転車
+        travelMode: google.maps.DirectionsTravelMode.TRANSIT        // 電車
+//        travelMode: google.maps.DirectionsTravelMode.WALKING        // 徒歩
     }
     */
+
     // 郡山駅から目的地経由の華の湯
     var request = {
 //        origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
 //        destination: new google.maps.LatLng(37.491190, 140.258520), // 到着地の緯度・経度
-        origin: "郡山駅",      // 出発地点の経度・緯度
-        destination: "ホテル華の湯", // 到着地の緯度・経度
-        waypoints: [{                                               // 中継地点
+        origin: "郡山駅",                  // 出発地点の経度・緯度
+        destination: "ホテル華の湯",       // 到着地の緯度・経度
+        waypoints: [{                     // 中継地点
             location: latlng,
             stopover: true
         }],
-        travelMode: google.maps.DirectionsTravelMode.DRIVING        // ルートの種類
+        // 交通手段
+        travelMode: google.maps.DirectionsTravelMode.DRIVING        // 自動車
+//        travelMode: google.maps.DirectionsTravelMode.BICYCLING      // 自転車
+//        travelMode: google.maps.DirectionsTravelMode.TRANSIT        // 電車
+//        travelMode: google.maps.DirectionsTravelMode.WALKING        // 徒歩
     }
 
     directionsService.route(request, function(result, status){
