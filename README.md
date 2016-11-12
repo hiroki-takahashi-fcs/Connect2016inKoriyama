@@ -6,6 +6,9 @@
 
 http://connect2016.azurewebsites.net
 
+Google Map デザインサンプル
+https://snazzymaps.com/
+
 
 各ファイルとフォルダについて
 
@@ -44,3 +47,5 @@ Connect2016inKoriyama/
  ├ index.php　…　最初の画面を表示するPHPファイル。
  
  └ next.php　…　詳細画面を表示するPHPファイル。
+
+test
