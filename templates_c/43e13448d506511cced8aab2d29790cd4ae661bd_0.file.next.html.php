@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 14:10:22
+/* Smarty version 3.1.30, created on 2016-11-12 15:03:21
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582714be734486_70309330',
+  'unifunc' => 'content_58272129626114_89530339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478956172,
+      1 => 1478959063,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582714be734486_70309330 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58272129626114_89530339 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -66,19 +66,19 @@ function content_582714be734486_70309330 (Smarty_Internal_Template $_smarty_tpl)
 			<div id="Map-Body">
 				<div id="mapField" style="height:410px;"></div>
 			</div>
-			<div id="areadata">周辺情報
-				<button class="placeSearch-btn" type="button" data-types="atm">ATM</button>
-				<button class="placeSearch-btn" type="button" data-types="bar">居酒屋</button>
-				<button class="placeSearch-btn" type="button" data-types="cafe">カフェ</button>
-				<button class="placeSearch-btn" type="button" data-types="car_rental">レンタカー</button>
-				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
-				<button class="placeSearch-btn" type="button" data-types="gas_station">ガソリンスタンド</button>
-				<button class="placeSearch-btn" type="button" data-types="hospital">病院</button>
-				<button class="placeSearch-btn" type="button" data-types="parking">駐車場</button>
-				<button class="placeSearch-btn" type="button" data-types="restaurant">レストラン</button>
-				<button class="placeSearch-btn" type="button" data-types="spa">温泉</button>
-				<button class="placeSearch-btn" type="button" data-types="taxi_stand">タクシー乗り場</button>
-				<button class="placeSearch-btn" type="button" data-types="train_station">駅</button>
+			<div id="areadata">
+				<input class="placeSearch-cb" type="checkbox" data-types="atm">ATM
+				<input class="placeSearch-cb" type="checkbox" data-types="bar">居酒屋
+				<input class="placeSearch-cb" type="checkbox" data-types="cafe">カフェ
+				<input class="placeSearch-cb" type="checkbox" data-types="car_rental">レンタカー
+				<input class="placeSearch-cb" type="checkbox" data-types="convenience_store">コンビニ
+				<input class="placeSearch-cb" type="checkbox" data-types="gas_station">ガソリンスタンド
+				<input class="placeSearch-cb" type="checkbox" data-types="hospital">病院
+				<input class="placeSearch-cb" type="checkbox" data-types="parking">駐車場
+				<input class="placeSearch-cb" type="checkbox" data-types="restaurant">レストラン
+				<input class="placeSearch-cb" type="checkbox" data-types="spa">温泉
+				<input class="placeSearch-cb" type="checkbox" data-types="taxi_stand">タクシー乗り場
+				<input class="placeSearch-cb" type="checkbox" data-types="train_station">駅
 			</div>
 		</div>
 	</body>

@@ -280,18 +280,3 @@ function getRoute(latlng){
 function fopenMarker(markerid){
     google.maps.event.trigger(side_list[markerid], 'click');
 }
-
-function clickEventFunc() {
-    console.log('右クリック');
-
-    var lat = event.latLng.lat();
-    var lng = event.latLng.lng();
-
-    marker[0] = new google.maps.Marker({
-
-        position: new google.maps.LatLng(lat, lng),
-        map: googlemap,
-        animation: google.maps.Animation.DROP
-
-    });
-}
