@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-13 00:17:42
+/* Smarty version 3.1.30, created on 2016-11-13 01:01:36
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5827a316054043_96404028',
+  'unifunc' => 'content_5827ad60b4a613_78184321',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478992638,
+      1 => 1478995294,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5827a316054043_96404028 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5827ad60b4a613_78184321 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -80,20 +80,22 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 					<tbody>
 					<tr>
 						<th id="iconSet">アイコン区分
-							<td id="icons"><img src="img/event/marker0.png">test</td>
-							<td id="icons"><img src="img/event/marker1.png">test</td>
-							<td id="icons"><img src="img/event/marker2.png">test</td>
-							<td id="icons"><img src="img/event/marker3.png">test</td>
-							<td id="icons"><img src="img/event/marker4.png">test</td>
-						<!--</th>
+							<td><img src="img/event/marker0.png"><text id="text0"></text></td>
+							<td><img src="img/event/marker1.png"><text id="text1"></text></td>
+							<td><img src="img/event/marker2.png"><text id="text2"></text></td>
+							<td><img src="img/event/marker3.png"><text id="text3"></text></td>
+							<td><img src="img/event/marker4.png"><text id="text4"></text></td>
+						</th>
 					</tr>
 					<tr>
-						<th class="iconSet">-->
-							<td id="icons"><img src="img/event/marker5.png">test</td>
-							<td id="icons"><img src="img/event/marker6.png">test</td>
-							<td id="icons"><img src="img/event/marker7.png">test</td>
-							<td id="icons"><img src="img/event/marker8.png">test</td>
-							<td id="icons"><img src="img/event/marker9.png">test</td>
+						<th class="iconSet">
+							<td><img src="img/event/marker5.png"><text id="text5"></text></td>
+							<td><img src="img/event/marker6.png"><text id="text6"></text></td>
+							<td><img src="img/event/marker7.png"><text id="text7"></text></td>
+							<td><img src="img/event/marker8.png"><text id="text8"></text></td>
+							<td><img src="img/event/marker9.png"><text id="text9"></text></td>
+							<td><img src="img/event/marker10.png"><text id="text10"></text></td>
+							<!--<td id="icons"><img src="img/event/marker10.png"><text id="text10"></text></td>-->
 						</th>
 					</tr>
 					</tbody>
