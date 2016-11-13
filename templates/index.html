@@ -14,11 +14,15 @@
 		<div id="In-Map">
 			<div id="Map-List">
 				<ul>
-					{for $i=0 to $data|@count - 1}
-						<li>
-<!--							<a href="next.php?index={$i}">{$data[$i][4]}</a> -->
-							<a href="#map" onclick="fopenMarker({$i});">{$data[$i][4]}</a>
-						</li>
+					{for $i=0 to $district|@count -1}
+						<li style="padding:5px 7px 5px 7px; font-weight:900;">{$district[$i]}</li>
+						{for $j=0 to $data|@count - 1}
+							{if $district[$i] eq $data[$j][1]}
+								<li>
+									<a href="#map" onclick="fopenMarker({$i});" style="margin-left:10px;">{$data[$j][4]}</a>
+								</li>
+							{/if}
+						{/for}
 					{/for}
 				</ul>
 			</div>

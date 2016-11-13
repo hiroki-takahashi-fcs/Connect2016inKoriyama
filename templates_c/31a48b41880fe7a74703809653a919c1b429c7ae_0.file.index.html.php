@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-13 01:01:36
+/* Smarty version 3.1.30, created on 2016-11-13 02:46:42
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5827ad60b4a613_78184321',
+  'unifunc' => 'content_5827c60221aee0_46485452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '31a48b41880fe7a74703809653a919c1b429c7ae' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\index.html',
-      1 => 1478995294,
+      1 => 1479001598,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5827ad60b4a613_78184321 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5827c60221aee0_46485452 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -45,18 +45,28 @@ function content_5827ad60b4a613_78184321 (Smarty_Internal_Template $_smarty_tpl)
 			<div id="Map-List">
 				<ul>
 					<?php
-$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['data']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['data']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
+$_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['i']->step = 1;$_smarty_tpl->tpl_vars['i']->total = (int) ceil(($_smarty_tpl->tpl_vars['i']->step > 0 ? count($_smarty_tpl->tpl_vars['district']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['district']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['i']->step));
 if ($_smarty_tpl->tpl_vars['i']->total > 0) {
 for ($_smarty_tpl->tpl_vars['i']->value = 0, $_smarty_tpl->tpl_vars['i']->iteration = 1;$_smarty_tpl->tpl_vars['i']->iteration <= $_smarty_tpl->tpl_vars['i']->total;$_smarty_tpl->tpl_vars['i']->value += $_smarty_tpl->tpl_vars['i']->step, $_smarty_tpl->tpl_vars['i']->iteration++) {
 $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1;$_smarty_tpl->tpl_vars['i']->last = $_smarty_tpl->tpl_vars['i']->iteration == $_smarty_tpl->tpl_vars['i']->total;?>
-						<li>
-<!--							<a href="next.php?index=<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
-</a> -->
-							<a href="#map" onclick="fopenMarker(<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-);"><?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['i']->value][4];?>
+						<li style="padding:5px 7px 5px 7px; font-weight:900;"><?php echo $_smarty_tpl->tpl_vars['district']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+</li>
+						<?php
+$_smarty_tpl->tpl_vars['j'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['j']->step = 1;$_smarty_tpl->tpl_vars['j']->total = (int) ceil(($_smarty_tpl->tpl_vars['j']->step > 0 ? count($_smarty_tpl->tpl_vars['data']->value)-1+1 - (0) : 0-(count($_smarty_tpl->tpl_vars['data']->value)-1)+1)/abs($_smarty_tpl->tpl_vars['j']->step));
+if ($_smarty_tpl->tpl_vars['j']->total > 0) {
+for ($_smarty_tpl->tpl_vars['j']->value = 0, $_smarty_tpl->tpl_vars['j']->iteration = 1;$_smarty_tpl->tpl_vars['j']->iteration <= $_smarty_tpl->tpl_vars['j']->total;$_smarty_tpl->tpl_vars['j']->value += $_smarty_tpl->tpl_vars['j']->step, $_smarty_tpl->tpl_vars['j']->iteration++) {
+$_smarty_tpl->tpl_vars['j']->first = $_smarty_tpl->tpl_vars['j']->iteration == 1;$_smarty_tpl->tpl_vars['j']->last = $_smarty_tpl->tpl_vars['j']->iteration == $_smarty_tpl->tpl_vars['j']->total;?>
+							<?php if ($_smarty_tpl->tpl_vars['district']->value[$_smarty_tpl->tpl_vars['i']->value] == $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['j']->value][1]) {?>
+								<li>
+									<a href="#map" onclick="fopenMarker(<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+);" style="margin-left:10px;"><?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['j']->value][4];?>
 </a>
-						</li>
+								</li>
+							<?php }?>
+						<?php }
+}
+?>
+
 					<?php }
 }
 ?>
@@ -72,7 +82,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 								<td><input type="image" id="routeicon" src="img/icon/icon2.png" title="車で移動"></td>
 							</th></tr>
 						</table>
-						<span id="search"><i id="searchArea">検索エリア</i><button tyep="button" id="Searchbtn" class="button">検索</button></span>
+						<!--<span id="search"><i id="searchArea">検索エリア</i><button tyep="button" id="Searchbtn" class="button">検索</button></span>-->
 					</span>
 				</div>
 				<div id="mapField" style="width:750px; height:590px;"></div>
@@ -112,8 +122,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 			<button tyep="button" id="button1" class="button">ボタン</button>
 			<button type="button" id="button2" class="button">ボタン</button>
 		</div>
-	</div>
 	</div>-->
+	</div>
 </body>
 
 </html><?php }
