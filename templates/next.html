@@ -9,17 +9,21 @@
 		<link rel="stylesheet" href="css\detail.css" type="text/css" media="screen">
 	</head>
 	<body>
+	<script>
+		var r = Math.radom();
+	</script>
 		<br><br>
 		<div id="Content">
-			<div><a href="index.php">ホーム</a> &gt; {$data[4]}</div>
+			<div><a href="index.php?flag=false">ホーム</a> &gt; {$data[4]}</div>
 			<div id="title">{$data[4]}</div>
 			<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
 			</div>
 			<div id="img">
-				<blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
+				<blockquote width="250px" height="300px" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
 				<script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
+				<img src="img/photo/003.jpg" width="300px" height="250px">
 			</div>
 			<div id="eventdata">{$data[8]}</div>
 			<table id="evedetail">
@@ -31,19 +35,19 @@
 			<div id="Map-Body">
 				<div id="mapField" style="height:410px;"></div>
 			</div>
-			<div id="areadata">
-				<input class="placeSearch-cb" type="checkbox" data-types="atm">ATM
-				<input class="placeSearch-cb" type="checkbox" data-types="bar">居酒屋
-				<input class="placeSearch-cb" type="checkbox" data-types="cafe">カフェ
-				<input class="placeSearch-cb" type="checkbox" data-types="car_rental">レンタカー
-				<input class="placeSearch-cb" type="checkbox" data-types="convenience_store">コンビニ
-				<input class="placeSearch-cb" type="checkbox" data-types="gas_station">ガソリンスタンド
-				<input class="placeSearch-cb" type="checkbox" data-types="hospital">病院
-				<input class="placeSearch-cb" type="checkbox" data-types="parking">駐車場
-				<input class="placeSearch-cb" type="checkbox" data-types="restaurant">レストラン
-				<input class="placeSearch-cb" type="checkbox" data-types="spa">温泉
-				<input class="placeSearch-cb" type="checkbox" data-types="taxi_stand">タクシー乗り場
-				<input class="placeSearch-cb" type="checkbox" data-types="train_station">駅
+			<div id="areadata">周辺情報
+				<button class="placeSearch-btn" type="button" data-types="atm">ATM</button>
+				<button class="placeSearch-btn" type="button" data-types="bar">居酒屋</button>
+				<button class="placeSearch-btn" type="button" data-types="cafe">カフェ</button>
+				<button class="placeSearch-btn" type="button" data-types="car_rental">レンタカー</button>
+				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
+				<button class="placeSearch-btn" type="button" data-types="gas_station">ガソリンスタンド</button>
+				<button class="placeSearch-btn" type="button" data-types="hospital">病院</button>
+				<button class="placeSearch-btn" type="button" data-types="parking">駐車場</button>
+				<button class="placeSearch-btn" type="button" data-types="restaurant">レストラン</button>
+				<button class="placeSearch-btn" type="button" data-types="spa">温泉</button>
+				<button class="placeSearch-btn" type="button" data-types="taxi_stand">タクシー乗り場</button>
+				<button class="placeSearch-btn" type="button" data-types="train_station">駅</button>
 			</div>
 		</div>
 	</body>
