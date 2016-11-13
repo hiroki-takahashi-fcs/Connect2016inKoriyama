@@ -291,10 +291,14 @@ function callback(results, status) {
                 position: results[i].geometry.location
 
             }
-
+            
             switch(types) {
                 case 'atm':
-                    atm[i] = new google.maps.Marker(placeLoc);
+                    atm[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/atm.png"
+        											});
                     atm[i].setMap(map);
                     google.maps.event.addListener(atm[i], 'click', function() {
                         infowindow.setContent(name);
@@ -303,7 +307,11 @@ function callback(results, status) {
                     break;
 
                 case 'bar':
-                    bar[i] = new google.maps.Marker(placeLoc);
+                    bar[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/bar.png"
+        											});
                     bar[i].setMap(map);
                     google.maps.event.addListener(bar[i], 'click', function() {
                         infowindow.setContent(name);
@@ -312,7 +320,11 @@ function callback(results, status) {
                     break;
 
                 case 'cafe':
-                    cafe[i] = new google.maps.Marker(placeLoc);
+                    cafe[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/cafe.png"
+        											});
                     cafe[i].setMap(map);
                     google.maps.event.addListener(cafe[i], 'click', function() {
                         infowindow.setContent(name);
@@ -321,7 +333,11 @@ function callback(results, status) {
                     break;
 
                 case 'car_rental':
-                    car_rental[i] = new google.maps.Marker(placeLoc);
+                    car_rental[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/car_rental.png"
+        											});
                     car_rental[i].setMap(map);
                     google.maps.event.addListener(car_rental[i], 'click', function() {
                         infowindow.setContent(name);
@@ -330,7 +346,11 @@ function callback(results, status) {
                     break;
 
                 case 'convenience_store':
-                    convenience_store[i] = new google.maps.Marker(placeLoc);
+                    convenience_store[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/convenience_store.png"
+        											});
                     convenience_store[i].setMap(map);
                     google.maps.event.addListener(convenience_store[i], 'click', function() {
                         infowindow.setContent(name);
@@ -339,7 +359,11 @@ function callback(results, status) {
                     break;
 
                 case 'gas_station':
-                    gas_station[i] = new google.maps.Marker(placeLoc);
+                    gas_station[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/gas_station.png"
+        											});
                     gas_station[i].setMap(map);
                     google.maps.event.addListener(gas_station[i], 'click', function() {
                         infowindow.setContent(name);
@@ -348,7 +372,11 @@ function callback(results, status) {
                     break;
 
                 case 'hospital':
-                    hospital[i] = new google.maps.Marker(placeLoc);
+                    hospital[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/hospital.png"
+        											});
                     hospital[i].setMap(map);
                     google.maps.event.addListener(hospital[i], 'click', function() {
                         infowindow.setContent(name);
@@ -357,7 +385,11 @@ function callback(results, status) {
                     break;
 
                 case 'parking':
-                    parking[i] = new google.maps.Marker(placeLoc);
+                    parking[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/parking.png"
+        											});
                     parking[i].setMap(map);
                     google.maps.event.addListener(parking[i], 'click', function() {
                         infowindow.setContent(name);
@@ -366,7 +398,11 @@ function callback(results, status) {
                     break;
 
                 case 'restaurant':
-                    restaurant[i] = new google.maps.Marker(placeLoc);
+                    restaurant[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/restaurant.png"
+        											});
                     restaurant[i].setMap(map);
                     google.maps.event.addListener(restaurant[i], 'click', function() {
                         infowindow.setContent(name);
@@ -375,7 +411,11 @@ function callback(results, status) {
                     break;
 
                 case 'spa':
-                    spa[i] = new google.maps.Marker(placeLoc);
+                    spa[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/spa.png"
+        											});
                     spa[i].setMap(map);
                     google.maps.event.addListener(spa[i], 'click', function() {
                         infowindow.setContent(name);
@@ -384,7 +424,11 @@ function callback(results, status) {
                     break;
                 
                 case 'taxi_stand':
-                    taxi_stand[i] = new google.maps.Marker(placeLoc);
+                    taxi_stand[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/taxi_stand.png"
+        											});
                     taxi_stand[i].setMap(map);
                     google.maps.event.addListener(taxi_stand[i], 'click', function() {
                         infowindow.setContent(name);
@@ -393,7 +437,11 @@ function callback(results, status) {
                     break;
 
                 case 'train_station':
-                    train_station[i] = new google.maps.Marker(placeLoc);
+                    train_station[i] = new google.maps.Marker({
+                    								position: new google.maps.LatLng(placeLoc.position.lat(), placeLoc.position.lng()),
+                    								title: name,
+        											icon: "img/place/train_station.png"
+        											});
                     train_station[i].setMap(map);
                     google.maps.event.addListener(train_station[i], 'click', function() {
                         infowindow.setContent(name);
