@@ -245,7 +245,7 @@ function markerEvent(i, dataArray){
        
 
         // 説明文表示
-        document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8] + "<br>" + Radiation;
+        document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8];
 
         
     });
