@@ -12,7 +12,6 @@
 	<br><br>
 	<div id="Content">
 		<div id="In-Map">
-			<div><button type="button" id="regist-btn">イベント登録</button><div>
 			<div id="Map-List">
 				<ul>
 					{assign var="row" value="0"}
@@ -33,16 +32,21 @@
 				<div>
 					<span>
 						<table id="iconbox">
-							<tr><th>
+							<tr>
 								<td><input type="image" id="routeicon" src="img/icon/icon1.png" title="徒歩で移動"></td>
 								<td><input type="image" id="routeicon" src="img/icon/icon2.png" title="車で移動"></td>
-							</th></tr>
+							</tr>
+						</table>
+						<table id="registerbox">
+							<tr>
+								<td><button type="button" id="regist-btn" style="width:100px; height:34px;">イベント登録</button></td>
+							</tr>
 						</table>
 						<table id="radiationbox">
-							<tr><th>
+							<tr>
 								<td id="radiation">周辺の放射線量</td>
 								<td></td>
-							</th></tr>
+							</tr>
 						</table>
 					</span>
 				</div>
