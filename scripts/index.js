@@ -155,7 +155,10 @@ function mapInit() {
         // 写真は暫定として今ある画像からテキトーに
         infoWindow[i] = new google.maps.InfoWindow({
             content: "<div id='infoWindow'><h3 style='display:inline-block; vertical-align:top'>" + dataArray[i][4] + "　</h3>"
-                     + "<img src='img/photo/00" + (i%5+1) + ".jpg' style='width:80px; '>"
+                     + "<img src='img/photo/00" + (i%5+1) + ".jpg' style='width:80px; float:right'>"
+                     + "<br>開催日：" + dataArray[i][13]
+                     + "<br>開催期間：" + dataArray[i][14]
+                     + "<br>開催時間：" + dataArray[i][15]
                      + "<br><a href='next.php?index=" + i + "'>詳細画面へ>>></div>",
             maxWidth: 400
         });
@@ -212,20 +215,34 @@ function markerEvent(i, dataArray){
         var dataArray_h = JSON.parse($script.attr('data_h-array'));
         
         var Radiation;
+        var unit;
         var distance_min;
         for (var j=0; j<dataArray_h.length; j++){
             var distance = getDistance(dataArray[i][6], dataArray[i][7],
                             dataArray_h[j][2], dataArray_h[j][3], 0);
             if (j == 0) {
                 distance_min = distance;
-                Radiation = dataArray_h[j][5] + dataArray_h[j][6];
+                Radiation = dataArray_h[j][5];
+                unit = dataArray_h[j][6];
             } else {
                 if (distance < distance_min){
-                    distance_min = distance;
-                    Radiation = dataArray_h[j][5] + dataArray_h[j][6];
+                    Radiation = dataArray_h[j][5];
+                    unit = dataArray_h[j][6];
                 }
             }
         }
+
+        // 最寄り観測地点の放射線量を表示」
+         document.getElementById('radiationbox').rows[0].cells[0].innerText = Radiation + unit;
+        if (Radiation > 0.23) {
+            // 規定値Over 
+            document.getElementById('radiationbox').rows[0].cells[1].innerHTML = "<img src='img/face/Bad.png'>";
+        } else if (Radiation > 0.19) {
+            document.getElementById('radiationbox').rows[0].cells[1].innerHTML = "<img src='img/face/Neutral.png'>";
+        } else {
+            document.getElementById('radiationbox').rows[0].cells[1].innerHTML = "<img src='img/face/Good.png'>";
+        }
+       
 
         // 説明文表示
         document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8] + "<br>" + Radiation;
