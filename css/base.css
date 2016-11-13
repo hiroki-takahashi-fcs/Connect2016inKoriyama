@@ -1505,6 +1505,8 @@ div.Pager a:hover{
 	#infoWindow {
 		margin: 5px;
 /*		height: 200px;*/ 
+		max-width: 400px;
+		min-width: 300px;
 	}
 	#infoWindow span {
 		color: blue;
