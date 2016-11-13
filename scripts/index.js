@@ -155,7 +155,10 @@ function mapInit() {
         // 写真は暫定として今ある画像からテキトーに
         infoWindow[i] = new google.maps.InfoWindow({
             content: "<div id='infoWindow'><h3 style='display:inline-block; vertical-align:top'>" + dataArray[i][4] + "　</h3>"
-                     + "<img src='img/photo/00" + (i%5+1) + ".jpg' style='width:80px; '>"
+                     + "<img src='img/photo/00" + (i%5+1) + ".jpg' style='width:80px; float:right'>"
+                     + "<br>開催日：" + dataArray[i][13]
+                     + "<br>開催期間：" + dataArray[i][14]
+                     + "<br>開催時間：" + dataArray[i][15]
                      + "<br><a href='next.php?index=" + i + "'>詳細画面へ>>></div>",
             maxWidth: 400
         });
@@ -226,6 +229,10 @@ function markerEvent(i, dataArray){
                 }
             }
         }
+
+        // 最寄り観測地点の放射線量を表示」
+//         document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8] + "<br>" + Radiation;
+       
 
         // 説明文表示
         document.getElementById('character').rows[1].cells[0].innerHTML = dataArray[i][8] + "<br>" + Radiation;
