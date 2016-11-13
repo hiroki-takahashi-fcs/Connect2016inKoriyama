@@ -26,8 +26,33 @@
 		}
 	}
 
+	// リストに表示するデータを並び替える
+	$temp = [];
+	for ($i = 0; $i < count($data); $i++)
+	{
+		$temp[$i] = $data[$i][1];
+	}
+	$unique = array_unique($temp);
+	$alignedUnique = array_values($unique);
+
+	$result = [];
+
+	foreach($alignedUnique as $u)
+	{
+		foreach($data as $d)
+		{
+			if (strval($d[1]) == strval($u))
+
+			array_push($result, $d);
+		}
+		
+	}
+
+	$data = $result;
+
 	ChromePhp::log($data);
 
+	$smarty->assign('district', $alignedUnique);
 	$smarty->assign('data', $data);
 
 	// 放射線量
