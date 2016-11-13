@@ -15,12 +15,14 @@
 			<div><button type="button" id="regist-btn">イベント登録</button><div>
 			<div id="Map-List">
 				<ul>
+					{assign var="row" value="0"}
 					{for $i=0 to $district|@count -1}
 						<li style="padding:5px 7px 5px 7px; font-weight:900;">{$district[$i]}</li>
 						{for $j=0 to $data|@count - 1}
 							{if $district[$i] eq $data[$j][1]}
 								<li>
-									<a href="#map" onclick="fopenMarker({$i});" style="margin-left:10px;">{$data[$j][4]}</a>
+									<a href="#map" onclick="fopenMarker({$row});" style="margin-left:10px;">{$data[$j][4]}</a>
+									{assign var="row" value=$row+1}
 								</li>
 							{/if}
 						{/for}

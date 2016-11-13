@@ -1,0 +1,83 @@
+@import "config.css";
+
+/* register css */
+
+/*---------------------------------------------------------------------------------
+
+	set
+
+---------------------------------------------------------------------------------*/
+body{
+	background-color: #a0522d;
+	box-shadow: inset 0 0 20px 20px #A0522D;
+}
+#background{
+	background-color: #deb887;
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0px 15px 20px #DEB887;
+}
+#name{
+	margin: 10px 0px 10px 0px ;
+}
+
+.name,.name {
+
+	   box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+
+	   }
+
+.year,.year{
+	 box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+}
+#year{
+	display: inline;
+		box-shadow: 0 0px 15px 20px #DEB887;
+}
+.month,.month{
+	 box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+}
+
+#mont{
+	display: inline;
+}
+.day,.day{
+	 box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+}
+#day{
+	display:inline;
+}
+div.textbox {
+	display:inline;
+}
+
+.time1,.time1{
+	box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+}
+#time1{
+	margin: 10px 10px 10px 10px ;
+	clear: both;
+}
+
+.time2,.time2{
+	box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 20px 20px #DEB887 inset ,0 0px 3px 3px #000000 inset ;
+}
+#title{
+/*	margin:10px 10px 10px 10px;*/
+	margin-top: 40px;
+	text-align: center;
+	font-size: large;
+	
+}
+
+#textarea{
+	margin: 10px 10px 10px 10px;
+}
+.textarea,.textarea{
+	box-shadow:  0 0px 2px 2px#b4321e  ,0 0px 100px 100px #DEB887 inset ,0 0px 5px 5px #000000 inset ;
+}
+
+#button{
+	text-align:center;
+}
