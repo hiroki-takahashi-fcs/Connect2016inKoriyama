@@ -152,8 +152,10 @@ function mapInit() {
         });
 
         // 情報ウィンドウ
+        // 写真は暫定として今ある画像からテキトーに
         infoWindow[i] = new google.maps.InfoWindow({
-            content: "<div id='infoWindow'><h3>" + dataArray[i][4] + "</h3>"
+            content: "<div id='infoWindow'><h3 style='display:inline-block; vertical-align:top'>" + dataArray[i][4] + "　</h3>"
+                     + "<img src='img/photo/00" + (i%5+1) + ".jpg' style='width:80px; '>"
                      + "<br><a href='next.php?index=" + i + "'>詳細画面へ>>></div>",
             maxWidth: 400
         });
@@ -234,19 +236,6 @@ function markerEvent(i, dataArray){
 
 // ルート描画
 function getRoute(latlng){
-    /* 
-    // 郡山駅から目的地まで
-    var request = {
-        origin: new google.maps.LatLng(37.398265, 140.388187),      // 出発地点の経度・緯度
-        destination: latlng,                                        // 到着地の緯度・経度
-        // 交通手段
-//        travelMode: google.maps.DirectionsTravelMode.DRIVING        // 自動車
-//        travelMode: google.maps.DirectionsTravelMode.BICYCLING      // 自転車
-        travelMode: google.maps.DirectionsTravelMode.TRANSIT        // 電車
-//        travelMode: google.maps.DirectionsTravelMode.WALKING        // 徒歩
-    }
-    */
-
     // 郡山駅から目的地経由の華の湯
     var request = {
         origin: "郡山駅",                  // 出発地点の経度・緯度

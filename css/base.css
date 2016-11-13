@@ -98,176 +98,11 @@
 	text-decoration:none;
 }
 
-
-#Header-TopMenu{
-	width:640px;
-	float:right;
-	overflow:hidden;
-	margin-bottom:5px;
-}
-
-#Header-TopMenu li{
-	float:left;
-	height:19px;
-}
-
-#Header-TopMenu a{
-	display:block;
-	overflow:hidden;
-	text-indent:-9999px;
-	height:19px;
-}
-
-#Header-TopMenu #Tmenu01 a{background:url(../images/tmenu01.jpg) 0 0;width:159px;}
-#Header-TopMenu #Tmenu02 a{background:url(../images/tmenu02.jpg) 0 0;width:190px;}
-#Header-TopMenu #Tmenu03 a{background:url(../images/tmenu03.jpg) 0 0;width:140px;}
-#Header-TopMenu #Tmenu04 a{background:url(../images/tmenu04.jpg) 0 0;width:151px;}
-
-#Header-TopMenu #Tmenu01 a:hover{background:url(../images/tmenu01.jpg) 0 -19px;width:159px;}
-#Header-TopMenu #Tmenu02 a:hover{background:url(../images/tmenu02.jpg) 0 -19px;width:190px;}
-#Header-TopMenu #Tmenu03 a:hover{background:url(../images/tmenu03.jpg) 0 -19px;width:140px;}
-#Header-TopMenu #Tmenu04 a:hover{background:url(../images/tmenu04.jpg) 0 -19px;width:151px;}
-
-#LiveCam{
-	clear:right;
-	float:right;
-	width:101px;
-	height:25px;
-	margin-bottom:4px;
-}
-
-#LiveCam a{
-	display:block;
-	overflow:hidden;
-	text-indent:-9999px;
-	background:url(../images/livecam.jpg) 0 0;
-	width:101px;
-	height:25px;
-}
-
-#LiveCam a:hover{background:url(../images/livecam.jpg) 0 -25px;}
-
-#Header-MainMenu{
-	clear:both;
-	height:43px;
-	width:964px;
-	position:relative;
-	left:-3px;
-	overflow:hidden;
-}
-
-
-#Header-MainMenu li{
-	float:left;
-}
-
-#Header-MainMenu a{
-	display:block;
-	overflow:hidden;
-	text-indent:-9999px;
-	height:43px;
-}
-
-#Header-MainMenu #Hmenu01 a,
-#Header-MainMenu #Hmenu02 a,
-#Header-MainMenu #Hmenu03 a,
-#Header-MainMenu #Hmenu04 a,
-#Header-MainMenu #Hmenu05 a,
-#Header-MainMenu #Hmenu06 a,
-#Header-MainMenu #Hmenu07 a,
-#Header-MainMenu #Hmenu08 a,
-#Header-MainMenu #Hmenu09 a
-{width:86px;}
-
-#Header-MainMenu #Hmenu00 a{background:url(../images/hmenu00.jpg) 0 0;width:155px;}
-#Header-MainMenu #Hmenu01 a{background:url(../images/hmenu01.jpg) 0 0}
-#Header-MainMenu #Hmenu02 a{background:url(../images/hmenu02.jpg) 0 0}
-#Header-MainMenu #Hmenu03 a{background:url(../images/hmenu03.jpg) 0 0}
-#Header-MainMenu #Hmenu04 a{background:url(../images/hmenu04.jpg) 0 0}
-#Header-MainMenu #Hmenu05 a{background:url(../images/hmenu05.jpg) 0 0}
-#Header-MainMenu #Hmenu06 a{background:url(../images/hmenu06.jpg) 0 0}
-#Header-MainMenu #Hmenu07 a{background:url(../images/hmenu07.jpg) 0 0}
-#Header-MainMenu #Hmenu08 a{background:url(../images/hmenu08.jpg) 0 0}
-#Header-MainMenu #Hmenu09 a{background:url(../images/hmenu09.jpg) 0 0;width:85px;}
-
-#Header-MainMenu #Hmenu00 a:hover{background:url(../images/hmenu00.jpg) 0 -43px;width:155px;}
-#Header-MainMenu #Hmenu01 a:hover{background:url(../images/hmenu01.jpg) 0 -43px}
-#Header-MainMenu #Hmenu02 a:hover{background:url(../images/hmenu02.jpg) 0 -43px}
-#Header-MainMenu #Hmenu03 a:hover{background:url(../images/hmenu03.jpg) 0 -43px}
-#Header-MainMenu #Hmenu04 a:hover{background:url(../images/hmenu04.jpg) 0 -43px}
-#Header-MainMenu #Hmenu05 a:hover{background:url(../images/hmenu05.jpg) 0 -43px}
-#Header-MainMenu #Hmenu06 a:hover{background:url(../images/hmenu06.jpg) 0 -43px}
-#Header-MainMenu #Hmenu07 a:hover{background:url(../images/hmenu07.jpg) 0 -43px}
-#Header-MainMenu #Hmenu08 a:hover{background:url(../images/hmenu08.jpg) 0 -43px}
-#Header-MainMenu #Hmenu09 a:hover{background:url(../images/hmenu09.jpg) 0 -43px;width:85px;}
-
-#Header-MainMenu #Hmenu00{margin-right:35px;}
-#Header-MainMenu #Hmenu02{margin-left:-1px;}
-#Header-MainMenu #Hmenu03{margin-left:-1px;}
-#Header-MainMenu #Hmenu04{margin-left:-1px;}
-#Header-MainMenu #Hmenu05{margin-left:-1px;}
-#Header-MainMenu #Hmenu06{margin-left:-1px;}
-#Header-MainMenu #Hmenu07{margin-left:-1px;}
-#Header-MainMenu #Hmenu08{margin-left:-1px;}
-#Header-MainMenu #Hmenu09{margin-left:-1px;}
-
-ul#K00 #Hmenu00 a{background:url(../images/hmenu00.jpg) 0 -43px;width:155px;}
-ul#K01 #Hmenu01 a{background:url(../images/hmenu01.jpg) 0 -43px}
-ul#K02 #Hmenu02 a{background:url(../images/hmenu02.jpg) 0 -43px}
-ul#K03 #Hmenu03 a{background:url(../images/hmenu03.jpg) 0 -43px}
-ul#K04 #Hmenu04 a{background:url(../images/hmenu04.jpg) 0 -43px}
-ul#K05 #Hmenu05 a{background:url(../images/hmenu05.jpg) 0 -43px}
-/*ul#K06 #Hmenu06 a{background:url(../images/hmenu06.jpg) 0 -43px}
-ul#K07 #Hmenu07 a{background:url(../images/hmenu07.jpg) 0 -43px}*/
-ul#K06 #Hmenu08 a{background:url(../images/hmenu08.jpg) 0 -43px}
-ul#K07 #Hmenu09 a{background:url(../images/hmenu09.jpg) 0 -43px;width:85px;}
-
-
-#Header-SubMenu{height:20px;margin-top:8px;float:left;width:400px;}
-#Header-SubMenu ul{border-left:1px solid #ddd;height:20px;}
-#Header-SubMenu li{
-	background:url(../images/li01.gif) 10px center no-repeat;
-	padding:0 10px 0 20px;
-	border-right:1px solid #ddd;
-	float:left;
-}
-
-#Header-SubMenu2{height:38px;margin-top;float:right;width:518px;}
-#Header-SubMenu2 li{float:left;}
-#Header-SubMenu2 a{
-	display:block;
-	text-indent:-9999px;
-	overflow:hidden;
-	height:38px;
-}
-#HS201 a{background:url(../images/hsubmenu01.jpg) 0 0;width:144px;}
-#HS202 a{background:url(../images/hsubmenu02.jpg) 0 0;width:155px;}
-#HS203 a{background:url(../images/hsubmenu03.jpg) 0 0;width:84px;}
-#HS204 a{background:url(../images/hsubmenu04.jpg) 0 0;width:134px;}
-
-#HS201 a:hover{background:url(../images/hsubmenu01.jpg) 0 -38px;width:144px;}
-#HS202 a:hover{background:url(../images/hsubmenu02.jpg) 0 -38px;width:156px;}
-#HS203 a:hover{background:url(../images/hsubmenu03.jpg) 0 -38px;width:84px;}
-#HS204 a:hover{background:url(../images/hsubmenu04.jpg) 0 -38px;width:134px;}
-
-#Pankuzu{padding-top:15px;clear:both;}
-#Pankuzu img{margin-right:10px;vertical-align:middle;margin-top:-3px;}
-
 body{
 	background-color: #A0522D;
 	box-shadow: inset 0 0 20px 20px #A0522D;
 	padding-bottom: 30px;
 }
-
-/*footer{
-	padding:0px 50px 20px 50px;
-	margin:auto;
-	width:1100px;
-	height: 150px;
-	background-color: #DEB887;
-	box-shadow: 0 8px 10px 10px #DEB887;
-	/*border-radius: 0px 0px 20px 20px / 0px 0px 20px 20px;
-}*/
 
 #Content{
 	width:1080px;
@@ -1056,13 +891,14 @@ div.Pager a:hover{
 	height: 30px;
 }
 
-#searchArea{
-	border:2px solid #A0522D;
-	width: 200px;
+#radiation{
+	width: 250px;
 	display: inline-block;
 	margin: 0px 5px;
+	margin-left: 350px;
 	height: 30px;
-	vertical-align: top;
+	padding: 20px 0 0;
+	text-align: right;
 }
 
 #Searchbtn{
