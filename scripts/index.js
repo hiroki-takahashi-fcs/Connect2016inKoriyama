@@ -69,7 +69,15 @@ function createMark(){
 				}
 			}
 		}
+		
+		if(eventMark[i - 1] != ""){
+			$('#text' + i).text(eventMark[i - 1]);
+		}
 	}
+	
+	$('#text0').text('個人イベント');
+	$('#text' + eventImgNum).text('その他');
+	
 }
 
 

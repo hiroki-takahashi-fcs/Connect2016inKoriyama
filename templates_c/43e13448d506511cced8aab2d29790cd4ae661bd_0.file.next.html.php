@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 15:18:49
+/* Smarty version 3.1.30, created on 2016-11-12 14:31:41
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582724c9e69df1_19852968',
+  'unifunc' => 'content_582719bd033a53_43204992',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478960309,
+      1 => 1478956931,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582724c9e69df1_19852968 (Smarty_Internal_Template $_smarty_tpl) {
+function content_582719bd033a53_43204992 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,20 +41,13 @@ function content_582724c9e69df1_19852968 (Smarty_Internal_Template $_smarty_tpl)
 	<body>
 		<br><br>
 		<div id="Content">
-			<div><a href="index.php">ホーム</a> &gt; <?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
-</div>
 			<div id="title"><?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
 </div>
-			<div id="buttons">
+			<!--<div id="buttons">
 				<button tyep="button" id="button1" class="button">ボタン</button>
 				<button type="button" id="button2" class="button">ボタン</button>
-			</div>
-			<div id="img">
-				<blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
-				<?php echo '<script'; ?>
- async src="https://theta360.com/widgets.js" charset="utf-8"><?php echo '</script'; ?>
->
-			</div>
+			</div>-->
+			<div id="img">ここに画像</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
 			<table id="evedetail">

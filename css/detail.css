@@ -37,6 +37,7 @@ tr td#head{
 #areadata{
 	width: 60%;
 	float:left;
+	margin-top: 20px;
 }
 
 #eventdata{
@@ -52,6 +53,7 @@ tr td#head{
 	font-size: 20px;
 	float:right;
 	padding: 10px 10px 10px 10px;
+	margin-top:50px;
 }
 
 #evedetail{
@@ -1095,8 +1097,6 @@ div.Pager a:hover{
 	float:left;
 	width:60%;
 	height:410px;
-	border: 3px solid #A0522D;
-	box-shadow: 0 0px 10px 2px #A0522D;
 }
 
 /*sekine_update
@@ -1110,6 +1110,11 @@ end*/
 #Map-Body-In{
 	float:right;
 	width:720px;
+}
+
+#mapField{
+	border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+	border:4px solid silver;
 }
 
 #Map-Body-In h4{background:/*url(../images/line01.gif) left bottom repeat-x*/ #f0f0f0;height:25px;font-size:16px;padding:10px 13px 5px 13px;margin-bottom:15px;}
