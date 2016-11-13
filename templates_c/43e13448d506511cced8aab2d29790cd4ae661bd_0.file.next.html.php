@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-12 14:31:41
+/* Smarty version 3.1.30, created on 2016-11-13 03:13:49
   from "C:\xampp\htdocs\Connect2016inKoriyama\templates\next.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_582719bd033a53_43204992',
+  'unifunc' => 'content_5827cc5d787597_83007869',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43e13448d506511cced8aab2d29790cd4ae661bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Connect2016inKoriyama\\templates\\next.html',
-      1 => 1478956931,
+      1 => 1479002894,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_582719bd033a53_43204992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5827cc5d787597_83007869 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,13 +41,17 @@ function content_582719bd033a53_43204992 (Smarty_Internal_Template $_smarty_tpl)
 	<body>
 		<br><br>
 		<div id="Content">
+			<div><a href="index.php?flag=false">ホーム</a> &gt; <?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
+</div>
 			<div id="title"><?php echo $_smarty_tpl->tpl_vars['data']->value[4];?>
 </div>
-			<!--<div id="buttons">
-				<button tyep="button" id="button1" class="button">ボタン</button>
-				<button type="button" id="button2" class="button">ボタン</button>
-			</div>-->
-			<div id="img">ここに画像</div>
+			<div id="img">
+				<blockquote width="250px" height="300px" class="ricoh-theta-spherical-image" >David Cafuta - <a href="https://theta360.com/spheres/samples/2bccbf6a-89ee-11e6-bbb7-064087ff3472-1" target="_blank">Spherical Image - RICOH THETA</a></blockquote>
+				<?php echo '<script'; ?>
+ async src="https://theta360.com/widgets.js" charset="utf-8"><?php echo '</script'; ?>
+>
+				<img src="img/photo/003.jpg" width="300px" height="250px">
+			</div>
 			<div id="eventdata"><?php echo $_smarty_tpl->tpl_vars['data']->value[8];?>
 </div>
 			<table id="evedetail">
@@ -66,19 +70,19 @@ function content_582719bd033a53_43204992 (Smarty_Internal_Template $_smarty_tpl)
 			<div id="Map-Body">
 				<div id="mapField" style="height:410px;"></div>
 			</div>
-			<div id="areadata">周辺情報
-				<button class="placeSearch-btn" type="button" data-types="atm">ATM</button>
-				<button class="placeSearch-btn" type="button" data-types="bar">居酒屋</button>
-				<button class="placeSearch-btn" type="button" data-types="cafe">カフェ</button>
-				<button class="placeSearch-btn" type="button" data-types="car_rental">レンタカー</button>
-				<button class="placeSearch-btn" type="button" data-types="convenience_store">コンビニ</button>
-				<button class="placeSearch-btn" type="button" data-types="gas_station">ガソリンスタンド</button>
-				<button class="placeSearch-btn" type="button" data-types="hospital">病院</button>
-				<button class="placeSearch-btn" type="button" data-types="parking">駐車場</button>
-				<button class="placeSearch-btn" type="button" data-types="restaurant">レストラン</button>
-				<button class="placeSearch-btn" type="button" data-types="spa">温泉</button>
-				<button class="placeSearch-btn" type="button" data-types="taxi_stand">タクシー乗り場</button>
-				<button class="placeSearch-btn" type="button" data-types="train_station">駅</button>
+			<div id="areadata">
+				<input class="placeSearch-cb" type="checkbox" data-types="atm">ATM
+				<input class="placeSearch-cb" type="checkbox" data-types="bar">居酒屋
+				<input class="placeSearch-cb" type="checkbox" data-types="cafe">カフェ
+				<input class="placeSearch-cb" type="checkbox" data-types="car_rental">レンタカー
+				<input class="placeSearch-cb" type="checkbox" data-types="convenience_store">コンビニ
+				<input class="placeSearch-cb" type="checkbox" data-types="gas_station">ガソリンスタンド
+				<input class="placeSearch-cb" type="checkbox" data-types="hospital">病院
+				<input class="placeSearch-cb" type="checkbox" data-types="parking">駐車場
+				<input class="placeSearch-cb" type="checkbox" data-types="restaurant">レストラン
+				<input class="placeSearch-cb" type="checkbox" data-types="spa">温泉
+				<input class="placeSearch-cb" type="checkbox" data-types="taxi_stand">タクシー乗り場
+				<input class="placeSearch-cb" type="checkbox" data-types="train_station">駅
 			</div>
 		</div>
 	</body>
@@ -98,5 +102,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['d']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-		</ul>--><?php }
+		</ul>-->
+<?php }
 }
