@@ -192,10 +192,6 @@ function markerEvent(i, dataArray){
         if (currentInfoWindow){
             currentInfoWindow.close();
         }
-        // 情報ウィンドウ開く
-        infoWindow[i].open(googlemap, marker[i]);
-        currentInfoWindow = infoWindow[i];
-
         // ルート検索を行う
         getRoute(new google.maps.LatLng(dataArray[i][6], dataArray[i][7]));
 
@@ -209,6 +205,11 @@ function markerEvent(i, dataArray){
             // はねさす
             marker[i].setAnimation(google.maps.Animation.BOUNCE);
         }
+
+        // 情報ウィンドウ開く
+        infoWindow[i].open(googlemap, marker[i]);
+        currentInfoWindow = infoWindow[i];
+
 
         // 放射線量CSVより最も近いデータを取得
         var $script = $('#script2');
